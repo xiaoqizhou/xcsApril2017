@@ -1,0 +1,85 @@
+%CS 109 Problem Set Template
+%B. E. Burr
+
+\documentclass{article}
+	% basic article document class
+	% use percent signs to make comments to yourself -- they will not show up.
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+	% packages that allow mathematical formatting
+
+\usepackage{graphicx}
+	% package that allows you to include graphics
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\frenchspacing
+	% one space after periods
+
+\usepackage{fancyhdr}
+	% allows custom headers
+
+\pagestyle{fancy}
+
+\lhead{CS 109, Stanford University \\ Problem Set 04} 
+\rhead{Xiaoqi Zhou (xqzhou@stanford.edu) \\ 06237147}
+
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0.4pt} 
+	%footer
+
+\begin{document}
+\thispagestyle{fancy} %shows header/footer
+
+\begin{enumerate}
+
+
+	\item 
+	
+	\begin{enumerate}
+		% 1.a
+		\item
+		\textbf{Conclusion:} \\
+		${ n = C(k,2) + C(k,1) = \frac{k!}{2!(k-2)!}+k=\frac{k(k-1)}{2}+k}$\\
+		\textbf{Explaination:} \\
+		There are only 2 possible cases while picking up 2 from total k prime numbers: different or same. So we can add the counts of the above 2 cases as the total combinations.
+		
+		%1.b
+		\item
+		\textbf{Conclusion:}\\
+		${ n = \frac{P(k+r,k+r)}{r!k!}  -\frac{P(k+r-1,k+r-1)}{(r-1)!k!}= \frac{(k+r)!}{r!k!}-\frac{(k+r-1)!}{(r-1)!k!} = \frac{k(k+r-1)!}{r!k!}}$\\
+		\textbf{Explaination:}\\
+		To solve this problem, we can create a model which has r idential divider and k sorted items (prime numbers). The number just after each divider would be considered as one of the selected numbers. The  First part of the polynominal represents the counts of the items + dividers combination. Second part represents the counts of the cases that at least one divider locates at the end of the queue.
+		
+		%1.c
+		\item \textbf{Conclusion:}\\
+		\textbf{Explaination:}
+		
+		
+
+	\end{enumerate}
+	\item
+
+	
+	\begin{enumerate}
+		
+		\item And a multinomial: ${n \choose 1, 2, 3}$
+		
+		\item A fraction with a binomial: $\frac{{x \choose y}}{z^2}$
+	
+	\end{enumerate}
+	
+	\item A summation: $\sum\limits_{i=1}^n i^2$
+	
+	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
+	
+	\item And a line \\ break.
+
+
+\end{enumerate}
+
+\newpage
+
+
+\end{document}
