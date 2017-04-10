@@ -295,8 +295,63 @@
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{13\times6\times48\times47\times46\times \frac{1}{6} \times 5!}{311875200}=0.519}$
 		}
+	
+		%8.c
+		\item
+		\mysolu
+		For the number of elements of the event ${E=\{\text{two pair in 5 cards}\}}$, we can select 2 numeric value from 13 numbers and pick up 2 cards in the total 4 of each value. Then we can add the last card from the rest 44 cards. After all the 5 cards are selected, we can calculate the permutation of the 5 cards.\\
+		${|E|={13 \choose 2}\cdot{4 \choose 2}^2 \cdot44\cdot 5!}$\\
+		\myansw
+		The probability of being dealt a two pair is\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{\frac{13\times12}{2}\times6^2\times44\times 5!}{311875200}=0.0475}$
+		}
+	
+		%8.d
+		\item
+		\mysolu
+		For the number of elements of the event ${E=\{\text{three of a kind in 5 cards}\}}$, we can select 1 numeric value from 13 numbers and pick up 3 cards in the total 4. Then we can add the last 2 cards from the rest 48 cards. After all the 5 cards are selected, we can calculate the permutation of the 5 cards.\\
+		${|E|=13\cdot{4 \choose 3} \cdot{48 \choose 2}\cdot 5!}$\\
+		\myansw
+		The probability of being dealt three of a kind is\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{13\times4\times48\times47\times \frac{1}{2} \times 5!}{311875200}=0.0226}$
+		}
+		
+		%8.e
+		\item
+		\mysolu
+		For the number of elements of the event ${E=\{\text{four of a kind in 5 cards}\}}$, we can select 1 numeric value from 13 numbers and pick up all the cards. Then we can add the last 1 cards from the rest 48 cards. After all the 5 cards are selected, we can calculate the permutation of the 5 cards.\\
+		${|E|=13\cdot 48\cdot 5!}$\\
+		\myansw
+		The probability of being dealt four of a kind is\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{13\times48 \times 5!}{311875200}=0.000240}$
+		}		
 		
 
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		Each die rolling have 6 possible resluts, the number of element in sample set\\
+		${|S| = 6^6}$\\
+		For the event ${E=\{\text{three different numbers and twice each}\}}$, we can choose 3 different numbers from 6 numbers and then put those 3 item gourp, which has 2 element in each, into 6 buckets.\\
+		${|E|={6 \choose 3}{6 \choose 2,2,2}=1800}$\\
+		\myansw
+		The possiblility that we will roll three different numbers, twice each is\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{1800}{6^6}=0.0386}$
+		}
+		
+		\item
+		For the event ${E=\{\text{some number exactly 4 times}\}}$, we can choose 1 number from 6 numbers and then choose the other 2 from the rest of 5 numbers. After choose all the numbers, put them into 6 bucket.\\
+		${|E|={6 \choose 1}{5 \choose 2}{6 \choose 4, 1, 1}=1800}$\\
+		\myansw
+		The possiblility that we will roll some number exacly 4 times is\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{1800}{6^6}=0.0386}$
+		}
 	\end{enumerate}
 
 %	\item A fraction with a binomial: $\frac{{x \choose y}}{z^2}$
