@@ -28,9 +28,13 @@
 \cfoot{\thepage}
 \renewcommand{\footrulewidth}{0.4pt} 
 	%footer
-
+\usepackage{color}
 \begin{document}
 \thispagestyle{fancy} %shows header/footer
+
+\newcommand{\myansw}{\textbf{Answer:}\\}
+
+\newcommand{\mysolu}{\textbf{Solution:}\\}
 
 \begin{enumerate}
 
@@ -40,36 +44,140 @@
 	\begin{enumerate}
 		% 1.a
 		\item
-		\textbf{Conclusion:} \\
-		${ n = C(k,2) + C(k,1) = \frac{k!}{2!(k-2)!}+k=\frac{k(k-1)}{2}+k}$\\
-		\textbf{Explaination:} \\
-		There are only 2 possible cases while picking up 2 from total k prime numbers: different or same. So we can add the counts of the above 2 cases as the total combinations.
-		
+		\mysolu
+		There are only 2 possible cases while picking up 2 from total k prime numbers: different or same. So we can add the counts of the above 2 cases as the total combinations.\\
+		\myansw
+		There are \\
+		\colorbox{yellow}{
+			${ {k \choose 2} + {k \choose 1} = \frac{k!}{2!(k-2)!}+k=\frac{k(k-1)}{2}+k}$
+		}\\
+		ways of choosing 2 prime numbers less than N.\\
+			
 		%1.b
 		\item
-		\textbf{Conclusion:}\\
-		${ n = \frac{P(k+r,k+r)}{r!k!}  -\frac{P(k+r-1,k+r-1)}{(r-1)!k!}= \frac{(k+r)!}{r!k!}-\frac{(k+r-1)!}{(r-1)!k!} = \frac{k(k+r-1)!}{r!k!}}$\\
-		\textbf{Explaination:}\\
-		To solve this problem, we can create a model which has r idential divider and k sorted items (prime numbers). The number just after each divider would be considered as one of the selected numbers. The  First part of the polynominal represents the counts of the items + dividers combination. Second part represents the counts of the cases that at least one divider locates at the end of the queue.
+		\mysolu
+		To solve this problem, we can create a model which has ${r}$ idential divider and k sorted items (prime numbers). The number just after each divider would be considered as one of the selected numbers. The  First part of the polynomial represents the counts of the items + dividers combination. Second part represents the counts of the cases that at least one divider locates at the end of the queue.\\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${  {k+r \choose k,r}  - {k+(r-1) \choose k, (r-1)}= \frac{(k+r)!}{r!k!}-\frac{(k+r-1)!}{(r-1)!k!} = \frac{k(k+r-1)!}{r!k!}}$
+		}\\
+		ways of choosing ${r}$ prime numbers less than N.\\
 		
 		%1.c
-		\item \textbf{Conclusion:}\\
-		\textbf{Explaination:}
-		
-		
+		\mysolu
+		Since the prime numbers set only includes distinct items in the beginning. We can just use combination of ${k}$ prime numbers taken ${r}$ at a time.\\
+				\myansw
+		There are\\
+		\colorbox{yellow}{
+			${{k \choose r}=\frac{k!}{(k-r)!r!}}$
+		}\\
+		ways of choosing ${r}$ distinct prime numbers less than N.\\
 
 	\end{enumerate}
+	
 	\item
-
-	
 	\begin{enumerate}
+		%2.a
 		
-		\item And a multinomial: ${n \choose 1, 2, 3}$
+		\item 
+		\mysolu
+		This is a permutation of all the 26 distinct letters.\\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${26!}$
+		}\\
+		ways for the 26 letters to be ordered if each letter appears exactly once and there are no other restrictions.\\
 		
-		\item A fraction with a binomial: $\frac{{x \choose y}}{z^2}$
+		%2.b
+		\item
+		\mysolu
+		We can treat Q and U as a bundle and then the solution is the permutation of 25 items (24 letters and 1 bundle) multiply by permutation of 2 letters which are close to each other.\\
+		ways for the 26 letters to be ordered if each letter appears exactly once and the letters Q and U must be next to each other (but in any order).\\
+				\myansw
+		There are\\
+		\colorbox{yellow}{
+			${25!2!}$
+		}\\
+		ways for the 26 letters to be ordered if each letter appears exactly once and the letters Q and U must be next to each other (but in any order).\\
+		
+		
+		%2.c
+		\item
+		\mysolu
+		There are ${26-5+1}$ gaps in queue of all the consonants, the 5 vowels can be considered 5 dividers been inerst into those gaps but one vowel at most in each gap. There are ${{26-5+1 \choose 5}5!}$ ways to select and permute 5 gaps to fit 5 vowels. The final result will be the permutation of vowels multiply by the permutation of consonants ${(26-5)!}$. \\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${{26-5+1 \choose 5}5!(26-5)! ={22 \choose 5}5!(26-5)! = \frac{22!}{17!5!}5!21! = \frac{22!21!}{17!}}$
+		}\\
+		ways for the 26 letters to be ordered if each letter appears exactly once and no two vowels can be next to each other.\\
+		
+		%2.d
+		\item
+		\mysolu
+		We can make all the 5 vowels as a group and the permutation of the 26 consonants with that group is ${{(26-5+1)!}}$. The permutation within the vowels group is ${5!}$.
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${(26-5+1)!5!}$
+		}\\
+		ways for the 26 letters to be ordered if each letter appears exactly ones and 5 vowels must be next to each other. 
+		
+		%2.e
+		\item
+		\mysolu
+		If the position of the three most common letters are fixed. For each case, for example, "E" at position 1, "A" at position 2 and "T" at position 3. The number of the permutation is decided by the permutation of the ${26 - 3 = 23}$ rest letters.
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${(26-3)! = 23!}$
+		}\\
+		ways for the 26 letters to be ordered if the position of the three most coomon letters (E,T and A) are fixed.\\
+		
+		
+	\end{enumerate}
+
+	\item
+	\begin{enumerate}
+		%3.a
+		\item
+		\mysolu
+		For each distinct card, there are 4 duplications. The answer should be the number of possible divisions of 208 total positions into 52 distinct groups of size 4.\\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${\frac{208!}{(4!)^{52}}}$
+		}\\
+		distinct ways for the cards to be ordered.\\
+		
+		%3.b
+		\item
+		\mysolu
+		There a 2 mutual exclusive cases for the combination of 2 cards, 2 different cards or same cards. For the 2 different cards case, there are ${{52 \choose 2}}$ ways of being dealt 2 cards. For the same cards case, there are just 52 ways.\\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${{52 \choose 2}+52 = \frac{52!}{2!50!}+52}$
+		}\\
+		distinct ways of being dealt two cards.
+		
+		%3.c
+		\item
+		\mysolu
+		There are only 5 good cards and the combination of them are very limited. Just as the previous question, we can consider 2 cases and the total number of choice is reduced from 52 to 5.
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${{5 \choose 2}+5 = 10 + 5 = 15}$
+		}\\
+		ways for you to get two "good" cards.
+		
+		
 	
 	\end{enumerate}
-	
+	\item A fraction with a binomial: $\frac{{x \choose y}}{z^2}$
 	\item A summation: $\sum\limits_{i=1}^n i^2$
 	
 	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]

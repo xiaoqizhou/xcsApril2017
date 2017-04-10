@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2017.4.6)  9 APR 2017 09:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2017.4.6)  6 APR 2017 00:32
 entering extended mode
-**"./cs109 homwork 04 Xiaoqi Zhou.tex"
-("cs109 homwork 04 Xiaoqi Zhou.tex"
+**./cs109_xiaoqi_zhou_templet.tex
+(cs109_xiaoqi_zhou_templet.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -160,16 +160,8 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \f@ncyO@olf=\skip53
 \f@ncyO@orf=\skip54
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
-)
-("cs109 homwork 04 Xiaoqi Zhou.aux")
-\openout1 = `"cs109 homwork 04 Xiaoqi Zhou.aux"'.
+(cs109_xiaoqi_zhou_templet.aux)
+\openout1 = `cs109_xiaoqi_zhou_templet.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -273,11 +265,11 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -285,37 +277,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 53.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--104
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--116
-
- []
+(amsmath)                 on input line 38.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -326,38 +288,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 130--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--154
-
- []
-
-[2] [3] ("cs109 homwork 04 Xiaoqi Zhou.aux") ) 
+(cs109_xiaoqi_zhou_templet.aux) ) 
 Here is how much of TeX's memory you used:
- 3010 strings out of 493333
- 40604 string characters out of 3136591
- 113899 words of memory out of 3000000
- 6504 multiletter control sequences out of 15000+200000
- 5647 words of font info for 23 fonts, out of 3000000 for 9000
+ 2961 strings out of 493333
+ 39816 string characters out of 3136591
+ 107009 words of memory out of 3000000
+ 6461 multiletter control sequences out of 15000+200000
+ 5339 words of font info for 22 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,12n,43p,443b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb>
-Output written on "cs109 homwork 04 Xiaoqi Zhou.pdf" (3 pages, 108213 bytes).
+ 40i,10n,43p,253b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr7.pfb>
+Output written on cs109_xiaoqi_zhou_templet.pdf (1 page, 70099 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
