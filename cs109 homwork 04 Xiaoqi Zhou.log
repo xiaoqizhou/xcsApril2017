@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2017.4.6)  9 APR 2017 09:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2017.4.6)  9 APR 2017 23:23
 entering extended mode
 **"./cs109 homwork 04 Xiaoqi Zhou.tex"
 ("cs109 homwork 04 Xiaoqi Zhou.tex"
@@ -298,22 +298,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--66
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--76
+Underfull \hbox (badness 10000) in paragraph at lines 69--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--92
+Underfull \hbox (badness 10000) in paragraph at lines 85--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--104
+Underfull \hbox (badness 10000) in paragraph at lines 96--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--116
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
  []
 
@@ -326,16 +326,61 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 130--138
+Underfull \hbox (badness 10000) in paragraph at lines 131--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--154
+Underfull \hbox (badness 10000) in paragraph at lines 147--155
 
  []
 
-[2] [3] ("cs109 homwork 04 Xiaoqi Zhou.aux") ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--191
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 194--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--253
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 258--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--287
+
+ []
+
+[4] ("cs109 homwork 04 Xiaoqi Zhou.aux") ) 
 Here is how much of TeX's memory you used:
  3010 strings out of 493333
  40604 string characters out of 3136591
@@ -343,21 +388,21 @@ Here is how much of TeX's memory you used:
  6504 multiletter control sequences out of 15000+200000
  5647 words of font info for 23 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,12n,43p,443b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb>
-Output written on "cs109 homwork 04 Xiaoqi Zhou.pdf" (3 pages, 108213 bytes).
+ 40i,11n,43p,841b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy7.pfb>
+Output written on "cs109 homwork 04 Xiaoqi Zhou.pdf" (4 pages, 120604 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

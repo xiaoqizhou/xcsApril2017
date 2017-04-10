@@ -65,6 +65,7 @@
 		ways of choosing ${r}$ prime numbers less than N.\\
 		
 		%1.c
+		\item
 		\mysolu
 		Since the prime numbers set only includes distinct items in the beginning. We can just use combination of ${k}$ prime numbers taken ${r}$ at a time.\\
 				\myansw
@@ -117,7 +118,7 @@
 		%2.d
 		\item
 		\mysolu
-		We can make all the 5 vowels as a group and the permutation of the 26 consonants with that group is ${{(26-5+1)!}}$. The permutation within the vowels group is ${5!}$.
+		We can make all the 5 vowels as a group and the permutation of the 26 consonants with that group is ${{(26-5+1)!}}$. The permutation within the vowels group is ${5!}$.\\
 		\myansw
 		There are\\
 		\colorbox{yellow}{
@@ -174,15 +175,136 @@
 		}\\
 		ways for you to get two "good" cards.
 		
-		
-	
 	\end{enumerate}
-	\item A fraction with a binomial: $\frac{{x \choose y}}{z^2}$
-	\item A summation: $\sum\limits_{i=1}^n i^2$
+	\item
+	\begin{enumerate}
+		%4.a
+		\item
+		\mysolu
+		To arrive the destination, the robot must move to the up ${n-1}$ times and move to the right $(m-1)$ times. Then the question can be an equivalence to a permutation of $(n-1)$ "move to the up" items and ${m-1}$ "move to the right" items.\\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${{(n-1)+(m-1) \choose (n-1),(m-1)} = \frac{(n+m-2)!}{(n-1)!(m-1)!}}$
+		}\\
+		distinct paths for the robot to take to the desination in cell ${(n,m)}$.\\
+		
+		%4.b
+		\item
+		\mysolu
+		If the first step of the robot must be moving to the right, then the number of paths equals to the case with ${(n,m-1)}$ grid.\\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${{(n-1)+(m-2) \choose (n-1),(m-2)} = \frac{(n+m-3)!}{(n-1)!(m-2)!}}$
+		}\\
+		distinct paths for the robot to take to the destination in cell ${(n,m)}$, if it must start by moving to the right.\\
+		
+		%4.c
+		\item
+		\mysolu
+		There are 2 possible directions for the robot at the beginning, up or right. We can analyze the case that the robot start by moving to the right. Since the total direction change number is odd, that means the last direction change must be "right to up" and happens in the last column. In any cases, there is no other path but go straight to the destination after the last turn. So we can just consider the number of the combinations of the first 2 turns. The first turn must happen in one of the ${m-2}$ columns, which exclude the first and last column; the second turn must happen in one of the ${n-2}$ rows, which also exclude the first and last row. Then the total combinations of possible paths are ${(m-2)(n-2)}$. The situation of the case that the robot start by moving to the up is similar.\\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${(m-2)(n-2)+(n-2)(m-2)=2(m-2)(n-2)}$
+		}\\
+		distinct paths for the robot to take to destination in cell ${(n,m)}$, if the robot changes direction exactly 3 times.\\
+		
+		
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		%5.a
+		\item
+		\mysolu
+		Since there are minimal investments for each company and each company must be invested, \textdollar1, \textdollar2, \textdollar3, \textdollar4 million can be assign to the respective company at first and then work out strategies based on rest of the \textdollar10 million. Each \textdollar1 million can choose any one of the total 4 companies.
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${(20-10)^{4}}$
+		}\\
+		different investment strategies are available if an investment must be made in each company.\\
+		
+		%5.b
+		\item 
+		\mysolu
+		We can consider 5 cases including 4 different cases that there is one distinct company have no investment and one more case that all the companies have investment.
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${(20-10)^{4}+\sum\limits_{i=6}^9(20-i)^3}$
+		}\\
+		different investment strategies are available if investments must be made in at least 3 of the 4 companies.\\
+		
+		
+		 
+	\end{enumerate}
+	\item
+	%6
+
+		\mysolu
+		Define summation of all the vectors ${m=\sum\limits_{i=1}^nX_i}$. Since ${m\leq{k}}$, there are ${k+1}$ possible value of ${m}$. For each distinct ${m}$, we can consider there are ${n-1}$ dividers insert into ${m}$ items. The total possible combination of particular ${m}$ is ${{m+n-1\choose n-1,m+1}={ m+n-1 \choose n-1,m}}$. Then for all the possible ${m}$, we can have ${\sum\limits_{i=0}^k{ m+n-1 \choose n-1,m}}$ different vectors.\\
+		\myansw
+		The number of vectors is\\
+		\colorbox{yellow}{
+			${\sum\limits_{i=0}^k{ m+n-1 \choose n-1,m}=\sum\limits_{i=0}^k \frac{(m+n-1)!}{(n-1)!(m)!}}$
+		}\\
+		
+
+	\item
+	%7
+
+		\mysolu
+		The total number of requests which can be \textquotedblleft pre-assigned\textquotedblright is ${k = \sum\limits_{i=1}^i m_i}$. The rest of identical requests are distributed to ${r}$ servers and the number of ways can be calculated by using ${(r-1)}$ dividers inserted into the queue of ${(n-k)}$ requests.\\
+		\myansw
+		There are\\
+		\colorbox{yellow}{
+			${{n-k+r-1 \choose n-k,r-1}=\frac{(n-k+r-1)!}{(n-k)!(r-1)!}}$ where ${k = \sum\limits_{i=1}^i m_i}$
+		}\\
+		ways for the requests to be distributed.\\
+
+
+
+	\item
+	\begin{enumerate}
+		%8.a
+		\item
+		\mysolu
+		Sample set is\\
+		${S=\{{\frac{52!}{47!}}\text{ permutations of 5 cards from total 52}\}}$\\
+		
+		For each suit, the event set is\\
+		${E_n=\{{\frac{13!}{8!}}\text{ permutations of 5 cards from total 13 cards in same suit}\}}$\\
+		and all the 4 event set are exclusive.\\
+		\myansw
+		The probability of being dealt a flush is\\
+		\colorbox{yellow}{
+			${
+				P(E)=\frac{|E_1\bigcup E_2\bigcup E_3\bigcup E_4|}{|S|} = \frac{(13\times14\times12\times11\times10\times9)\times4}{52\times51\times50\times49\times48}=\frac{617760}{311875200}=0.00198
+			}$
+		}\\
+		
+		%8.b
+		\item
+		\mysolu
+		For the number of elements of the event ${E=\{\text{one pair in 5 cards}\}}$, we can select 1 numeric value from 13 numbers and pick up 2 cards in the total 4. Then we can add another 3 cards from the rest 48 cards. After all the 5 cards are selected, we can calculate the permutation of the 5 cards.\\
+		${|E|=13\cdot{4 \choose 2}\cdot{48 \choose 3} \cdot 5!}$\\
+		\myansw
+		The probability of being dealt a one pair is\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{13\times6\times48\times47\times46\times \frac{1}{6} \times 5!}{311875200}=0.519}$
+		}
+		
+
+	\end{enumerate}
+
+%	\item A fraction with a binomial: $\frac{{x \choose y}}{z^2}$
+%	\item A summation: $\sum\limits_{i=1}^n i^2$
 	
-	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
+%	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
 	
-	\item And a line \\ break.
+%	\item And a line \\ break.
 
 
 \end{enumerate}
