@@ -333,17 +333,18 @@
 	\end{enumerate}
 	\item
 	\begin{enumerate}
+		%9.a
 		\item
 		Each die rolling have 6 possible resluts, the number of element in sample set\\
 		${|S| = 6^6}$\\
 		For the event ${E=\{\text{three different numbers and twice each}\}}$, we can choose 3 different numbers from 6 numbers and then put those 3 item gourp, which has 2 element in each, into 6 buckets.\\
 		${|E|={6 \choose 3}{6 \choose 2,2,2}=1800}$\\
 		\myansw
-		The possiblility that we will roll three different numbers, twice each is\\
+		The possibility that we will roll three different numbers, twice each is\\
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{1800}{6^6}=0.0386}$
 		}
-		
+		%9.b
 		\item
 		For the event ${E=\{\text{some number exactly 4 times}\}}$, we can choose 1 number from 6 numbers and then choose the other 2 from the rest of 5 numbers. After choose all the numbers, put them into 6 bucket.\\
 		${|E|={6 \choose 1}{5 \choose 2}{6 \choose 4, 1, 1}=1800}$\\
@@ -352,6 +353,21 @@
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{1800}{6^6}=0.0386}$
 		}
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		
+		\item
+		\mysolu
+		The sample space size equals to the number of all permutations of n integers, ${|S|=n!}$. The event space is the permutations that make the BSD have completely degenerate structure. Since we can only choose the maximum or the minimum from the rest of all the numbers for each node in sequence. The event space size is ${|E|=2^{n-1}}$\\
+		\myansw
+		The possibility that the resulting BST will have completely degenerate structure is\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{2^{n-1}}{n!}}$
+			
+		}\\
+		
+		
 	\end{enumerate}
 
 %	\item A fraction with a binomial: $\frac{{x \choose y}}{z^2}$
