@@ -124,7 +124,7 @@
 		\colorbox{yellow}{
 			${(26-5+1)!5!}$
 		}\\
-		ways for the 26 letters to be ordered if each letter appears exactly ones and 5 vowels must be next to each other. 
+		ways for the 26 letters to be ordered if each letter appears exactly ones and 5 vowels must be next to each other.\\ 
 		
 		%2.e
 		\item
@@ -173,7 +173,7 @@
 		\colorbox{yellow}{
 			${{5 \choose 2}+5 = 10 + 5 = 15}$
 		}\\
-		ways for you to get two "good" cards.
+		ways for you to get two "good" cards.\\
 		
 	\end{enumerate}
 	\item
@@ -294,7 +294,7 @@
 		The probability of being dealt a one pair is\\
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{13\times6\times48\times47\times46\times \frac{1}{6} \times 5!}{311875200}=0.519}$
-		}
+		}\\
 	
 		%8.c
 		\item
@@ -305,7 +305,7 @@
 		The probability of being dealt a two pair is\\
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{\frac{13\times12}{2}\times6^2\times44\times 5!}{311875200}=0.0475}$
-		}
+		}\\
 	
 		%8.d
 		\item
@@ -316,7 +316,7 @@
 		The probability of being dealt three of a kind is\\
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{13\times4\times48\times47\times \frac{1}{2} \times 5!}{311875200}=0.0226}$
-		}
+		}\\
 		
 		%8.e
 		\item
@@ -327,7 +327,7 @@
 		The probability of being dealt four of a kind is\\
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{13\times48 \times 5!}{311875200}=0.000240}$
-		}		
+		}\\		
 		
 
 	\end{enumerate}
@@ -343,7 +343,7 @@
 		The possibility that we will roll three different numbers, twice each is\\
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{1800}{6^6}=0.0386}$
-		}
+		}\\
 		%9.b
 		\item
 		For the event ${E=\{\text{some number exactly 4 times}\}}$, we can choose 1 number from 6 numbers and then choose the other 2 from the rest of 5 numbers. After choose all the numbers, put them into 6 bucket.\\
@@ -352,11 +352,11 @@
 		The possiblility that we will roll some number exacly 4 times is\\
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{1800}{6^6}=0.0386}$
-		}
+		}\\
 	\end{enumerate}
 	\item
 	\begin{enumerate}
-		
+		%10.a
 		\item
 		\mysolu
 		The sample space size equals to the number of all permutations of n integers, ${|S|=n!}$. The event space is the permutations that make the BSD have completely degenerate structure. Since we can only choose the maximum or the minimum from the rest of all the numbers for each node in sequence. The event space size is ${|E|=2^{n-1}}$\\
@@ -366,7 +366,7 @@
 			${P(E)=\frac{|E|}{|S|}=\frac{2^{n-1}}{n!}}$
 			
 		}\\
-	
+		%10.b
 		\item
 		\mysolu
 		Usually, we can just use program to calculate the possibility of forming a completely degenerate BST of each ${n}$ and find the first one have the possibility lower than 0.01. Without help of computer, we can still estimate it. First, ${n!}$ must higher than 100, then ${n\geqslant6}$, ${P(E) = 0.0127}$  when ${n = 7}$,${P(E) = 0.0032}$ when ${ n = 8}$.\\
@@ -380,6 +380,7 @@
 	\end{enumerate}
 	\item
 	\begin{enumerate}
+		%11.a
 		\item
 		\mysolu
 		The sample space is all the distinct password permutations, then ${|S|=n!}$. If the first successful login will be exactly on her ${k}$-th try, that means the event space is the rest ${(n-1)}$ distinct password permutation. The event space size is ${|E|=(n-1)!}$.\\
@@ -387,7 +388,115 @@
 		The probability that her first successful login will be exactly on her ${k}$-th try is\\
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{(n-1)!}{n!}}$
-		}
+		}\\
+	
+		%11.b
+		\item
+		\mysolu
+		Since the passwords are never deleted, the probability of the event that the hacker login successfully in the ${i}$-th try is ${P(E_i)=\frac{1}{n}}$. The probability of login successfully on exactly ${k}$-th equals to the probability of all the first ${k-1}$ tries are failed and the ${k}$-th try is successful.\\
+		\myansw
+		The probability of ${E_{successful} = \{\text{the hacker first successful login will be exactly on her }k\text{-th try}\}}$ is\\
+		\colorbox{yellow}{
+			${P(E_{successful})=P(E^c_1E^c_2\ldots E^c_{k-1}E_k)=P(E^c_1)P(E^c_2)\ldots P(E^c_k-1)P(E_k)=(\frac{n-1}{n})^{k-1}\frac{1}{n}}$
+		}\\
+	\end{enumerate}
+	\item 
+	\begin{enumerate}
+		%12.a
+		\item
+		\mysolu
+		From the description in the question, we can define\\
+		${J = \{\text{Students in Java class}\}}$\\
+		${C = \{\text{Students in C++ class}\}}$\\
+		${Y = \{\text{Students in Python class}\}}$\\
+		Then we can calculate the probability of the student in each exclusive condition\\
+		${P(JYC^c)=P(JY)-P(JYC)=\frac{5}{100}-
+			\frac{3}{100}=0.02}$\\
+		${P(JCY^c)=P(JC)-P(JYC)=0.09}$\\
+		${P(YCJ^c)=P(YC)-P(JYC)=0.04}$\\
+		${P(YC^cJ^c)=P(Y)-P(YCJ^c\cup YJC^c \cup YJC)}$\\
+		${=P(Y)-(P(YCJ^c)+P(YJC^c)+P(YJC))=\frac{18}{100}-(0.04+0.02+0.03)=0.09}$\\
+		${P(CY^cJ^c)=P(C)-P(CYJ^c\cup CJY^c \cup YJC)=0.10}$\\
+		${P(JY^cC^c)=P(J)-P(JYC^c\cup JCY^c \cup YJC)=0.13}$\\
+		The the probability of a student chooses at least one of the programming classes is\\
+		${P(J\cup Y\cup C)=P(JYC^c)+P(JCY^c)+P(YCJ^c)+P(YC^cJ^c)+P(CY^cJ^c)+P(JY^cC^c)+P(JCY)=0.5}$\\
+		So the probability of a student do not choose any one of the 3 classes is\\
+		${P(Y^cJ^cC^c)= 1- P(J\cup Y\cup C)=0.5}$
+		We can also use the proposition about the probability of the union of multiple events\\
+		${P(Y\cup J\cup C)=P(Y)+P(J)+P(C)-P(YJ)-P(YC)-P(JC)+P(YJC)=0.5}$\\
+		The reason that all the individual probabilities are calculated is just for the convenience to the following questions.
+		to get the probability of a student that chooses at least on of the classes\\
+		\myansw
+		The probability that he or she is not in any of the 3 programming classes is\\
+		\colorbox{yellow}{
+			${P(Y^cJ^cC^c)= 1- P(J\cup Y\cup C)=0.5}$
+		}\\
+		
+		%12.b
+		\item
+		\mysolu
+		We can use the conclusion of the previous question directly\\
+		\myansw
+		The probability that he or she is taking exactly one of the three programming classes is\\
+		\colorbox{yellow}{
+			${P(E)=P(JY^cC^c)+P(CY^cJ^c)+P(YJ^cC^c)=0.32}$
+		}\\
+		%12.c
+		\item
+		\mysolu
+		The probability of each student that is taking at least one programming class is\\
+		${P(E_i)=P(Y^cJ^cC^c)= 1- P(J\cup Y\cup C)=0.5}$\\
+		\myansw
+		The probability that at least on of the chosen students is taking at least one programming class is\\
+		\colorbox{yellow}{
+			${P(E_1\cup E_2)=P(E_1)+P(E_2)-P(E_1 E_2)=0.75}$
+		}\\
+		
+	\end{enumerate}
+	\item
+	%13
+	\begin{enumerate}
+		\mysolu
+		The permutations of all the $(M+N)$ bits can be a sample space having equally likely outcomes.
+		${|S|={M+N \choose M,N}=\frac{(M+N)!}{M!N!}}$\\
+		The event space can be determined by 2 parts, permutation fo the first ${r}$ bits and the permutation of the rest bits.\\
+		For the first part, the event space size can be considered as choose ${k}$ positions to fit '1' in them from the total ${r}$ positions ${|E_1|={r \choose k}}$.\\
+		For the second part, for each particular case in ${E_1}$, the event space size can be considered as to choose ${N-k}$ positions to fit '1' in them from the total ${M+N-r}$ positions ${|E_2|={M+N-r \choose N-k}}$\\
+		${|E|= |E_1|\cdot |E_2| ={r \choose k}{M+N-r \choose N-k} }$\\	
+		\myansw
+		The probability that the first ${r}$ bit of the received messaged contain exactly ${k}$ 1's is\\
+		${P(E)=\frac{|E|}{|S|}=\frac{{r \choose k}{M+N-r \choose N-k}}{{M+N \choose M,N}}}$\\
+		
+	\end{enumerate}
+	\item
+	%14
+	\begin{enumerate}
+		\mysolu
+		There are 3 possible situation when generate 2 integers in the range 1 to 12\\
+		${E_g = \{\text{The second value is greater than the first one}\}}$\\
+		${E_s = \{\text{The second value is smaller than the first one}\}}$\\
+		${E_e = \{\text{The second value is equal to the first one}\}}$\\
+		It is easy to calculate\\
+		${P(E_e)=\frac{12}{12^2}=\frac{1}{12}}$\\
+		Since the probability of ${E_g}$ and ${E_s}$ are the same we can have following equations\\
+		${P(E_g)+P(E_s)+P(E_e) = 1}$\\
+		${P(E_g)=P(E_s)}$\\
+		\myansw
+		The Probability that the second randomly generated integer has a value that is greater than the first is\\
+		\colorbox{yellow}{\
+			${P(E_g)= \frac{1-P(E_e)}{2}=0.458}$\\
+		}\\
+	\end{enumerate}
+	\item
+	%15
+	\begin{enumerate}
+		\mysolu
+		For the event space size we can consider it in 2 parts, pickup ${k}$ strings in the first bucket from ${m}$ strings. And then put the rest of strings into $(N-1)$ buckets.\\
+		${|E| = {m \choose k}(N-1)^{m-k}}$\\
+		\myansw
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{{m \choose k}(N-1)^{m-k}}{N^m}}$
+		}\\
 		
 	\end{enumerate}
 
