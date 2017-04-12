@@ -366,7 +366,28 @@
 			${P(E)=\frac{|E|}{|S|}=\frac{2^{n-1}}{n!}}$
 			
 		}\\
+	
+		\item
+		\mysolu
+		Usually, we can just use program to calculate the possibility of forming a completely degenerate BST of each ${n}$ and find the first one have the possibility lower than 0.01. Without help of computer, we can still estimate it. First, ${n!}$ must higher than 100, then ${n\geqslant6}$, ${P(E) = 0.0127}$  when ${n = 7}$,${P(E) = 0.0032}$ when ${ n = 8}$.\\
+		\myansw
+		The smallest value of ${n}$ for which the probability of forming a completely degenerate BST is less than 0.01 is\\
+		\colorbox{yellow}{
+			${n = 8}$ while ${P(E) = 0.0032}$
+		}\\
 		
+		
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		The sample space is all the distinct password permutations, then ${|S|=n!}$. If the first successful login will be exactly on her ${k}$-th try, that means the event space is the rest ${(n-1)}$ distinct password permutation. The event space size is ${|E|=(n-1)!}$.\\
+		\myansw
+		The probability that her first successful login will be exactly on her ${k}$-th try is\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{(n-1)!}{n!}}$
+		}
 		
 	\end{enumerate}
 
