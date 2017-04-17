@@ -1,0 +1,137 @@
+%CS 109 Problem Set Xiaoqi Zhou
+
+
+\documentclass{article}
+	% basic article document class
+	% use percent signs to make comments to yourself -- they will not show up.
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+	% packages that allow mathematical formatting
+
+\usepackage{graphicx}
+	% package that allows you to include graphics
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\frenchspacing
+	% one space after periods
+
+\usepackage{fancyhdr}
+	% allows custom headers
+
+\pagestyle{fancy}
+
+\lhead{CS 109, Stanford University \\ Problem Set \#2} 
+\rhead{Xiaoqi Zhou (xqzhou@stanford.edu) \\ 06237147}
+\usepackage{color}
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0.4pt} 
+	%footer
+\newcommand{\myansw}{\textbf{Answer:}\\}
+\newcommand{\mysolu}{\textbf{Solution:}\\}
+\begin{document}
+\thispagestyle{fancy} %shows header/footer
+
+\begin{enumerate}
+	\item
+	\begin{enumerate}
+		%1.a
+		\item
+		\mysolu
+		Define event\\
+		${J = \{\text{engineer program in Java}\}}$\\
+		${C = \{\text{engineer program in C++}\}}$\\
+		Then
+		${P(C|J)=\frac{P(CJ)}{P(J)}}$\\
+		${0.24=\frac{P(CJ)}{0.36}}$\\
+		\myansw
+		The probability that a randomly selected engineer programs in Java and C++ is\\
+		\colorbox{yellow}{
+			${P(CJ)=0.0864}$\\
+		}\\
+		%1.b
+		\item
+		\mysolu
+		${P(J|C)=\frac{P(CJ)}{P(C)}}$\\
+		\myansw
+		The probability that a randomly selected engineer programs in Java given that he/she programs in C++ is\\
+		\colorbox{yellow}{
+			${P(J|C)=\frac{0.0864}{0.33}=0.2618}$\\
+		}\\
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		%2.a
+		\item 
+		\mysolu
+		${P(E)=\frac{4\times 3}{52 \times 51}=0.0181}$\\
+		The Ace of Spades can be either the first card or the second card\\
+		${P(F)=\frac{1\times 51 + 51 \times 1}{52 \times 51}=0.0385}$\\
+		${P(EF)=\frac{1\times 3 + 3 \times 1}{52 \times 51}=0.00226}$\\
+		\myansw
+		\colorbox{yellow}{${P(E|F)=\frac{P(EF)}{P(F)}=0.0588}$}\\
+		%2.b
+		\item 
+		\mysolu
+		Since event ${G}$ must happen when event ${E}$ happens\\
+		${P(G|E)=1}$\\
+		${1=\frac{P(GE)}{P(E)}}$\\
+		${P(GE)=P(E)}$\\
+		We can calculate the complement of event ${G}$\\
+		${P(G^c)=\frac{48\times 47}{52\times 51}=0.851}$\\
+		${P(G)=1-P(G^c)=0.149}$\\
+		\myansw
+		\colorbox{yellow}{
+			${P(E|G)=\frac{P(EG)}{P(G)}=\frac{P(E)}{P(G)}=0.121}$
+		}\\
+	\end{enumerate}
+	\begin{enumerate}
+		\item
+		\mysolu
+		Define event ${E_i=\{\text{a user likes movie} M_i\}}$,${T=\{\text{a user like the Tearjerker genre}\}}$\\
+		${P(E_i|T)=p_i}$\\
+		\myansw
+		${P((E_1 \cap E_2 \cap E_3)|T)=P(E_1|T)\cap P(E_2|T)\cap P(E_3|T)}$\\
+		Since all the ${E_i|T}$ are conditionally independent, the probability that a user likes all three movies $M_1$, $M_2$ and $M_3$ given that they like the Tearjerker genre is\\
+		${P((E_1 \cap E_2 \cap E_3)|T)=P(E_1|T)P(E_2|T)P(E_3|T)=p_1 p_2 p_3}$
+		\item
+		\myansw
+		\colorbox{yellow}{
+			${P((E_1 \cup E_2 \cup E_3)|T)=P(E_1|T) \cup P(E_2|T) \cup P(E_3|T) = p_1+p_2+p_3 - (p_1 p_2+p_3 p_2+p_3 p_1)}$
+		}\\
+		\item
+		\mysolu
+		Define event ${E_{all}=\{\text{user likes all the 3 movie}\}}$\\
+		${P(E_{all}|T)=p_1 p_1 p_3}$\\
+		${P(E_{all}|T^c)=q_1 q_2 q_3}$\\
+		${P(E_{all}T)=P(E_{all}|T)P(T)=0.6 p_1 p_2 p_3}$\\
+		${P(E_{all}T^c)=P(E_{all}|T^c)P(T)=(1-0.6) q_1 q_2 q_3=0.4 q_1 q_2 q_3 }$\\
+		${P(E_{all})=P(E_{all}T)+P(E_{all}T^c)}$\\
+		\myansw
+		The probability that they like the Tearjerker genre that they like $M_1$, $M_2$ and $M_3$ is\\
+		\colorbox{yellow}{
+			${P(T|E_{all})=\frac{P(TE_{all})}{P(E)}=\frac{0.6 p_1 p_2 p_3}{0.6 p_1 p_2 p_3+0.4 q_1 q_2 q_3}}$
+		}\\
+		
+	\end{enumerate}
+	\begin{enumerate}
+		\item
+		\mysolu
+		We can calculate the probability of event ${F=\{text{all the 5 servers failed in one year}\}}$\\
+		${P(F)=(1-p)^5}$\\
+		\myansw
+		The probability that at least 1 server is still working after on year is\\
+		\colorbox{yellow}{${P(E_1)=1-P(F)=1-(1-p)^5}$}\\
+	\end{enumerate}
+
+%	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
+
+
+
+\end{enumerate}
+
+\newpage
+
+
+\end{document}
