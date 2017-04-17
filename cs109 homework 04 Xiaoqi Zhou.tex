@@ -129,7 +129,7 @@
 		%2.e
 		\item
 		\mysolu
-		If the position of the three most common letters are fixed. For each case, for example, "E" at position 1, "A" at position 2 and "T" at position 3. The number of the permutation is decided by the permutation of the ${26 - 3 = 23}$ rest letters.
+		If the position of the three most common letters are fixed. For each case, for example, "E" at position 1, "A" at position 2 and "T" at position 3. The number of the permutation is decided by the permutation of the ${26 - 3 = 23}$ rest letters.\\
 		\myansw
 		There are\\
 		\colorbox{yellow}{
@@ -167,7 +167,7 @@
 		%3.c
 		\item
 		\mysolu
-		There are only 5 good cards and the combination of them are very limited. Just as the previous question, we can consider 2 cases and the total number of choice is reduced from 52 to 5.
+		There are only 5 good cards and the combination of them are very limited. Just as the previous question, we can consider 2 cases and the total number of choice is reduced from 52 to 5.\\
 		\myansw
 		There are\\
 		\colorbox{yellow}{
@@ -229,7 +229,7 @@
 		%5.b
 		\item 
 		\mysolu
-		We can consider 5 cases including 4 different cases that there is one distinct company have no investment and one more case that all the companies have investment.
+		We can consider 5 cases including 4 different cases that there is one distinct company have no investment and one more case that all the companies have investment.\\
 		\myansw
 		There are\\
 		\colorbox{yellow}{
@@ -256,11 +256,11 @@
 	%7
 
 		\mysolu
-		The total number of requests which can be \textquotedblleft pre-assigned\textquotedblright is ${k = \sum\limits_{i=1}^i m_i}$. The rest of identical requests are distributed to ${r}$ servers and the number of ways can be calculated by using ${(r-1)}$ dividers inserted into the queue of ${(n-k)}$ requests.\\
+		The total number of requests which can be \textquotedblleft pre-assigned\textquotedblright is ${k = \sum\limits_{i=1}^r m_i}$. The rest of identical requests are distributed to ${r}$ servers and the number of ways can be calculated by using ${(r-1)}$ dividers inserted into the queue of ${(n-k)}$ requests.\\
 		\myansw
 		There are\\
 		\colorbox{yellow}{
-			${{n-k+r-1 \choose n-k,r-1}=\frac{(n-k+r-1)!}{(n-k)!(r-1)!}}$ where ${k = \sum\limits_{i=1}^i m_i}$
+			${{n-k+r-1 \choose n-k,r-1}=\frac{(n-k+r-1)!}{(n-k)!(r-1)!}}$ where ${k = \sum\limits_{i=1}^r m_i}$
 		}\\
 		ways for the requests to be distributed.\\
 
@@ -465,7 +465,9 @@
 		${|E|= |E_1|\cdot |E_2| ={r \choose k}{M+N-r \choose N-k} }$\\	
 		\myansw
 		The probability that the first ${r}$ bit of the received messaged contain exactly ${k}$ 1's is\\
-		${P(E)=\frac{|E|}{|S|}=\frac{{r \choose k}{M+N-r \choose N-k}}{{M+N \choose M,N}}}$\\
+		\colorbox{yellow}{
+			${P(E)=\frac{|E|}{|S|}=\frac{{r \choose k}{M+N-r \choose N-k}}{{M+N \choose M,N}}}$
+		}\\
 		
 	\end{enumerate}
 	\item
@@ -491,12 +493,25 @@
 	%15
 	\begin{enumerate}
 		\mysolu
-		For the event space size we can consider it in 2 parts, pickup ${k}$ strings in the first bucket from ${m}$ strings. And then put the rest of strings into $(N-1)$ buckets.\\
+		For the event space size we can consider it in 2 parts, pickup ${k}$ strings in the first bucket from ${m}$ strings ${m \choose k}$. And then put the rest of strings into $(N-1)$ buckets.\\
 		${|E| = {m \choose k}(N-1)^{m-k}}$\\
 		\myansw
 		\colorbox{yellow}{
 			${P(E)=\frac{|E|}{|S|}=\frac{{m \choose k}(N-1)^{m-k}}{N^m}}$
 		}\\
+		
+		More Discussion\\
+		We can solve this question in an other perspective. We can build events\\
+		${E_n}$= All the elements in particular group with k strings go into first bucket and the rest N-k string go into other buckets\\
+		${P(E) = P(E_1\cup E_2\cup \ldots \cup E_n)}$\\
+		Since all the ${E_n}$ are mutually exclusive.\\
+		${P(E) = \sum\limits_{i=1}^n P(E_i)}$\\
+		${P(E_i) = (\frac{1}{N})^k(\frac{N-1}{N})^{m-k}}$\\
+		${n = {m \choose k}}$\\
+		\colorbox{yellow}{
+			${P(E)=nP(E_i)={m \choose k}(\frac{1}{N})^k(\frac{N-1}{N})^{m-k}}$
+		}\\
+		which is as same as the previous conclusion.
 		
 	\end{enumerate}
 
