@@ -86,6 +86,7 @@
 			${P(E|G)=\frac{P(EG)}{P(G)}=\frac{P(E)}{P(G)}=0.121}$
 		}\\
 	\end{enumerate}
+	\item
 	\begin{enumerate}
 		\item
 		\mysolu
@@ -115,6 +116,7 @@
 		}\\
 		
 	\end{enumerate}
+	\item
 	\begin{enumerate}
 		\item
 		\mysolu
@@ -123,7 +125,46 @@
 		\myansw
 		The probability that at least 1 server is still working after on year is\\
 		\colorbox{yellow}{${P(E_1)=1-P(F)=1-(1-p)^5}$}\\
+		\item
+		\mysolu
+		We can consider each particular combination of the 3 servers that are still working.\\
+		${P(G_i)=p^3(1-p)^2}$\\
+		Since all the events are mutually exclusive
+		\myansw
+		The probability that exactly 3 server is still working after on year is\\
+		\colorbox{yellow}{
+			${P(E_3)={5 \choose 3}P(G_i)=6p^3(1-p)^2}$
+		}\\
+		\item
+		\mysolu
+		We can consider 3 situations: exactly 3, 4, 5 servers are still working after one year and combine them together.\\
+		\myansw
+		The probability that at least 3 server is still working after on year is\\
+		\colorbox{yellow}{
+			${P(E)=P(E_3)+P(E_4)+P(E_5)=\sum\limits_{i=3}^5 {5 \choose i}p^i(1-p)^{5-i}}$
+		}\\
+		
 	\end{enumerate}
+	\item
+	\mysolu
+	The probability of all the bit in a ${n}$ bit string is\\
+	${P(F) = (1-p)^n}$\\
+	Then the probability that at least one 1 in the string is\\
+	${P(E) = 1- P(F)= 1-(1-p)^n}$\\
+	\myansw
+	${P(E)>0.7}$\\
+	The ${n}$ requirment for the probability that there is at least one 1 in the string is at least 0.7 is\\
+	\colorbox{yellow}{	
+		${n>log_{1-p}(0.3)}$
+	}\\
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		No
+		${P(E)=}$
+	\end{enumerate}
+
 
 %	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
 
