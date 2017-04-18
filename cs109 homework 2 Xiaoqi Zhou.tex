@@ -161,8 +161,30 @@
 	\begin{enumerate}
 		\item
 		\mysolu
-		No
-		${P(E)=}$
+		${F_i=\{\text{at least one string hashed into i-th bucket}\}}$\\
+		${P(E) = 1-P((F_1 F_2 F_3 F_4)^c)=1-P(F_1^c \cup F_2^c \cup F_3^c \cup F_4^c)}$\\
+		Since all the ${F_i^c}$ are not mutually exclusive, the answer will be very complex before expansion.
+		Because of the limited number of buckets and strings, we can try to use another way to get the answer.\\
+		${G = \{\text{All the buckets have at least 1 string}\}}$\\
+		${H = \{\text{No string in bucket 5, all the first 4 buckets have at least one or 2 strings}\}}$\\
+		${I = \{\text{No string in bucket 5, all the first 4 buckets have at least one or 3 strings}\}}$\\
+		${P(E)=P(G)+P(G_5)+P(G_6)}$\\
+		For each of event ${G}$, there is only one bucket can have 2 strings in it and we can add up all the 5 possible situation to get the total probability.\\
+		${P(G)=\frac{6!}{2!}\sum\limits_{i=1}^5(p_i\prod\limits_{j=1}^5p_j)=360\sum\limits_{i=1}^5 p_i\prod\limits_{j=1}^5p_j = 360\prod\limits_{j=1}^5p_j}$\\
+		For each of event ${H}$, there are 2 bucket have 2 strings in it.\\
+		${P(H)=\frac{6!}{2!2!}(p_1 p_2 p_3^2 p_4^2+p_1 p_2^2 p_3 p_4^2 \ldots)=180(p_1 p_2 + p_1 p_3 + p_1 p_4 + p_2 p_3 + p_2 p_4 + p_3 p_4)p_1 p_2 p_3 p_4}$\\
+		For each of event ${H}$, there are 1 bucket have 3 strings in it.\\
+		${P(I)=\frac{6!}{3!}(p_1^3 p_2 p_3 p_4 + p_1 p_2^3 p_3 p_4 + p_1 p_2 p_3^3 p_4+ p_1 p_2 p_3 p_4^3) = 120(p_1^2+p_2^2+p_3^2+p_4^2) p_1 p_2 p_3 p_4}$\\
+		\myansw
+		\colorbox{yellow}{
+		${P(E)=60(6p_5 + 3(p_1 p_2 + p_1 p_3 + p_1 p_4 + p_2 p_3 + p_2 p_4 + p_3 p_4)+2(p_1^2+p_2^2+p_3^2+p_4^2))p_1p_2p_3p_4}$}\\
+		\item
+		\myansw
+		After substitute all the ${p_i}$ values, we can get\\
+		\colorbox{yellow}{
+			${P(E)=60\times(6\times 0.1 + 3\times 0.2925+2\times 0.225)\times 0.0015=0.1735}$
+		}
+		
 	\end{enumerate}
 
 
