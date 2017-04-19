@@ -2,7 +2,8 @@ import random
 def lastNumber(n, minRandom, maxRandom):
     residual = n
     while residual > 0:
-        lastN = round(random.uniform(minRandom+0.5, maxRandom+0.5))
+        #lastN = round(random.uniform(minRandom+0.5, maxRandom+0.5))
+        lastN = random.uniform(minRandom , maxRandom )
         residual = residual - lastN
     return lastN
 
@@ -26,5 +27,5 @@ def runGame(i):
 
     return float(secondWinN)/i
 
-aaa = runGame(1000000)
+aaa = runGame(100000)
 print(aaa)

@@ -210,9 +210,27 @@
 		\item
 		\mysolu
 		After run the simulation, the probability that second player wins is\\
-		${0.516}$
+		\colorbox{yellow}{${0.528}$}
 		
 	\end{enumerate}
+	\item
+	\mysolu
+	We can define the event ${E=\{\text{window is detected}\}}$. Then\\
+	${P(EL_1)=0.8\times 0.2=0.16}$\\
+	${P(EL_2)=0.2\times 0.9=0.18}$\\
+	Since ${L_1}$ and ${L_2}$ are complement to each other,\\
+	${P(E)=P(EL_1)+P(EL_2)=0.34}$\\
+	We can update the probability estimation based on the new information that the window is detected.
+	${P(L_1|E)=\frac{P(EL_1)}{P(E)}=0.47}$\\
+	${P(L_2|E)=\frac{P(EL_2)}{P(E)}=0.53}$\\
+	\myansw
+	The rober new values for ${P(L_1)}$ and ${P(L_2)}$ is\\
+	\colorbox{yellow}{
+		${P(L_1')=P(L_1|E)=0.47}$
+	}\\
+	\colorbox{yellow}{
+		${P(L_2')=P(L_2|E)=0.53}$
+	}\\
 
 
 %	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
