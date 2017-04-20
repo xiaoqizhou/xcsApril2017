@@ -167,9 +167,9 @@
 		Since all the ${F_i^c}$ are not mutually exclusive, the answer will be very complex before expansion.
 		Because of the limited number of buckets and strings, we can try to use another way to get the answer.\\
 		${G = \{\text{All the buckets have at least 1 string}\}}$\\
-		${H = \{\text{No string in bucket 5, all the first 4 buckets have at least one or 2 strings}\}}$\\
-		${I = \{\text{No string in bucket 5, all the first 4 buckets have at least one or 3 strings}\}}$\\
-		${P(E)=P(G)+P(G_5)+P(G_6)}$\\
+		${H = \{\text{No string in bucket 5, all the first 4 buckets have  one or 2 strings}\}}$\\
+		${I = \{\text{No string in bucket 5, all the first 4 buckets have  one or 3 strings}\}}$\\
+		${P(E)=P(G)+P(H)+P(I)}$\\
 		For each of event ${G}$, there is only one bucket can have 2 strings in it and we can add up all the 5 possible situation to get the total probability.\\
 		${P(G)=\frac{6!}{2!}\sum\limits_{i=1}^5(p_i\prod\limits_{j=1}^5p_j)=360\sum\limits_{i=1}^5 p_i\prod\limits_{j=1}^5p_j = 360\prod\limits_{j=1}^5p_j}$\\
 		For each of event ${H}$, there are 2 bucket have 2 strings in it.\\
@@ -231,6 +231,18 @@
 	\colorbox{yellow}{
 		${P(L_2')=P(L_2|E)=0.53}$
 	}\\
+	\item
+	\mysolu
+	\myansw
+	The probabilities of all 16 cells is\\
+	\colorbox{yellow}{
+		$\begin{bmatrix}
+			0.0744&0.1885&0.0744&0.0050\\
+			0.0050&0.1488&0.0942&0.0744\\
+			0.0010&0.0050&0.1488&0.0942\\
+			0.0010&0.0010&0.0010&0.0744\\
+		\end{bmatrix}$
+	}
 
 
 %	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
