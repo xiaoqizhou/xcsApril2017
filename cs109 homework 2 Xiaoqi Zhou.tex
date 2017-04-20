@@ -233,13 +233,19 @@
 	}\\
 	\item
 	\mysolu
+	For each location we can define the probability of the cell at that location is ${P(L_i)}$; the probability of a cell records two bars is ${P(B)}$\\
+	${P(B|L_i)=\frac{P(BL_i)}{P(L_i)}}$\\
+	${P(BL_i)=P(L_i)P(B|L_i)}$\\
+	Since the summation of the probability that records two bars at all the locations is the total probability that the cell can have two bars.\\
+	${P{Li|B}=\frac{P(BL_i)}{P(B)}=\frac{P(L_i)P(B|L_i)}{\sum\limits_{i=1}^n P(L_i)P(B|L_i)}}$\\
+	In the program, we can calculate ${P(BL_i)}$ in each location and get the summation of them.\\
 	\myansw
 	The probabilities of all 16 cells is\\
 	\colorbox{yellow}{
 		$\begin{bmatrix}
 			0.0744&0.1885&0.0744&0.0050\\
-			0.0050&0.1488&0.0942&0.0744\\
-			0.0010&0.0050&0.1488&0.0942\\
+			0.0050&0.1488&0.0942&0.0744\\
+			0.0010&0.0050&0.1488&0.0942\\
 			0.0010&0.0010&0.0010&0.0744\\
 		\end{bmatrix}$
 	}
