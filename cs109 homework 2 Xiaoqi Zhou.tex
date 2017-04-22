@@ -10,6 +10,7 @@
 	% packages that allow mathematical formatting
 
 \usepackage{graphicx}
+\usepackage{float}
 	% package that allows you to include graphics
 
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
@@ -210,7 +211,7 @@
 		\item
 		\mysolu
 		After run the simulation, the probability that second player wins is\\
-		\colorbox{yellow}{${0.528}$}
+		\colorbox{yellow}{${0.516}$}
 		
 	\end{enumerate}
 	\item
@@ -249,6 +250,130 @@
 			0.0010&0.0010&0.0010&0.0744\\
 		\end{bmatrix}$
 	}
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		Assume A is the blue-eyed genes and B is the brown-eyed gene. Since William's sister have blue eye and William and both of his parents have brown eyes, we can know that both of William's parents are (AB) combination.
+		The possible gene combinations of William is (AA), (AB), (BA), (BB). Define ${E = \{\text{William possesses a blue-eyed gene}\}}$, ${F = \{\text{William has brown eyes}\}}$.\\
+		${P(F) = \frac{3}{4}}$\\
+		${P(E)= \frac{2}{4} = \frac{1}{2}}$\\
+		\myansw
+		The probability that William possesses a blue-eyed gene is\\
+		\colorbox{yellow}{${P(G)=P(E|F)=\frac{P(EF)}{P(F)}=\frac{0.5}{0.75}=\frac{2}{3}}$}\\
+		\item
+		\mysolu
+		William's wife have blue eyes, that means her gene combination is (AA).\\
+		Define ${H = \{\text{William's first child have blue eyes}\}}$\\
+		${P(H) = P(HG)+P(HG^c)={P(H|G)}{P(G)}+{P(H|G^c)}{P(G^c)}}$\\
+		\myansw
+		The probability that their first child will have blue eyes is\\
+		\colorbox{yellow}{${P(H) = \frac{1}{2} \times \frac{2}{3}+\frac{1}{3} \times 0 = \frac{1}{3}}$}\\
+		\item
+		\mysolu
+		Define ${I = \{\text{William's next child have brown eyes}\}}$, so ${I^c = \{\text{William's next child have blue eyes}\}}$\\
+		We should update event ${G = \{\text{William possesses a blue-eyed gen}\}}$, based on knowing that his first child have brown eyes.\\
+		${P(G')=P(G|H^c)=\frac{P(GH^c)}{P(H^c)}=\frac{\frac{1}{3}}{\frac{2}{3}}=\frac{1}{2}}$\\
+		\myansw
+		By using the previous conclusion\\
+		${P(I^c)= P(I^c|G)P(G)+P(I^c|G^c)P(G^c)=\frac{1}{2}\times \frac{1}{2}+\frac{1}{3} \times 0 = \frac{1}{4}}$\\
+		The probability that their next child will also have brown eyes is\\
+		\colorbox{yellow}{${P(I)=1-P(I^c) = \frac{3}{4}}$} \\
+		
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		From the description, we can find\\
+		${P(T_1|G^c) = 0}$\\
+		${P(T_2|G^c) = 0}$\\
+		${P(T_1 T_2|G^c) = 0.72}$\\
+		\myansw
+		${P(T_1|G)P(T_2|G)=P(T_1 T_2|G)=0.72}$\\
+		\colorbox{yellow}{So, ${T_1}$ and ${T_2}$ are conditionally independent given ${G}$.}\\
+		\item
+		\myansw
+		${P(T_1|G)=P(T_2|G) = 0}$\\
+		\colorbox{yellow}{Since both of the probability is 0, ${T_1}$ and ${T_2}$ conditionally independence is undifined ginve ${G^c}$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{${P(T_1)= P(T_1|G)P(G)+P(T_1|G^c)P(G^c) = 0.8\times 0.6 = 0.48}$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{${P(T_2)= P(T_2|G)P(G)+P(T_2|G^c)P(G^c) = 0.9\times 0.6 = 0.54}$}\\
+		\myansw
+		${P(T_1 T_2)= P(T_1 T_2|G)P(G)=0.72\times 0.6 = 0.432}$\\
+		${P(T_1)P(T_2)=0.48\times 0.52 = 0.2592}$\\
+		${P(T_1)P(T_2) \neq P(T_1 T_2)}$\\
+		\colorbox{yellow}{${T_1}$ and ${T_2}$ are NOT independent (gene G is the relation ship between them.)}\\
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\myansw
+		\colorbox{yellow}{${P(T) = 0.30079}$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{${P(G_1) = 0.70028}$}\\
+		\colorbox{yellow}{${P(G_2) = 0.30076}$}\\
+		\colorbox{yellow}{${P(G_3) = 0.5009}$}\\
+		\colorbox{yellow}{${P(G_4) = 0.8016}$}\\
+		\colorbox{yellow}{${P(G_5) = 0.32705}$}\\
+		\item
+		\mysolu
+		${P(G_1T) = 0.21210 }$ vs. ${P(G1)P(T) = 0.21124}$\\
+		${P(G_2T) = 0.09089}$ vs. ${P(G2)P(T) = 0.09047}$\\
+		${P(G_3T) = 0.29212}$ vs. ${P(G3)P(T) = 0.15067}$\\
+		${P(G_4T) = 0.29703}$ vs. ${P(G4)P(T) = 0.24112}$\\
+		${P(G_5T) = 0.29434}$ vs. ${P(G5)P(T) = 0.09837}$\\
+		\myansw
+		\colorbox{yellow}{${G_1}$ and ${G_2}$ independent of ${T}$, ${G_4}$ is likely independent of ${T}$}\\
+		
+		\item
+		\myansw
+		${P(T|G_1)=\frac{P(G_1T)}{P(G_3)} = 0.302}$ independent\\
+		${P(T|G_2)=\frac{P(G_2T)}{P(G_3)} = 0.302}$ independent\\
+		\colorbox{yellow}{${P(T|G_3)=\frac{P(G_3T)}{P(G_3)} = 0.583}$} double the chance to have trait\\
+		${P(T|G_4)=\frac{P(G_4T)}{P(G_4)} = 0.371}$  likely independent\\
+		\colorbox{yellow}{${P(T|G_5)=\frac{P(G_5T)}{P(G_5)} = 0.900}$} important fact to have trait\\
+		
+		\item
+		\myansw
+		For the previous results we can find\\
+		\colorbox{yellow}{1. ${G_5}$ is assumed to be a main course of the trait}\\
+		\colorbox{yellow}{2. ${G_3}$ is assumed to increase the probability of the trait}\\
+		\colorbox{yellow}{3. ${G_4}$ is assumed to have some relationship between the trait}\\
+		
+		\item
+		\mysolu
+		We can always create a program to ergodic the relationships between all the combination of genes and automatically figure out the independences. Based on the limited size of gene that we are interested in, we can have a other way to find the hidden rule to guide our analysis.\\
+		We create a pattern number based on the combination of gene. For all the 6 gene, we can have pattern 0 to 31, and each pattern can represent one of the distinct gene combination. For example, combination ${G_5 G_4^c G_3 G_2 G_1^c}$ and be represented as b10110 = 22.\\
+		Following is the plot of counts of samples in different gene pattern.\\
+		\begin{figure}[H]
+			\caption{Trait vs. Gene Pattern}
+			\centering
+			\includegraphics[width=0.8\textwidth]{bat.png}
+		\end{figure}
+		Becasue of the high dynamic range of the smalpe counts in different gene pattern, the Y scale of the plot is set to log. We can find that ${G_5}$ only exist when both ${G_3}$ and ${G_4}$ exist.\\
+		${P(G_5|G_3G_4)=0.800}$\\
+		${P(G_3G_4|G_5) =0.982}$\\
+		\colorbox{yellow}{${G_3 \cap G_4}$ is the necessity condition of ${G_5}$}\\
+		${P(G_3G_4) = 0.401}$ vs.${P(G_4)P(G_4)=0.402}$\\ 
+		\colorbox{yellow}{${G_3}$ and ${G_4}$ are independent.}\\
+		Given ${P(T|G_5) = 0.900}$, not all the ${T}$ have ${G_5}$. If we still believe ${G_5}$ is necessity condition of ${T}$, we can analysis the fales positive rate of the trait test.\\
+		If ${P\{\text{false positive}\} > P{(T|G_5^c)}=0.049}$, it is very likely the trait without ${G_5}$ is casued by fales positive in the test.\\
+		Same as the samples have ${G_5}$ but not trait.\\
+		If ${P\{\text{false negative}\}>P(G_5|T)=0.020}$, it is very likely that the sample have ${G_5}$ but not have ${T}$ is casued by false negative in the test.\\
+				\begin{figure}[H]
+			\caption{Gene and Trait Relationship}
+			\centering
+			\includegraphics[width=0.5\textwidth]{GT.jpg}
+		\end{figure}
+		
+		
+
+	\end{enumerate}
 
 
 %	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
