@@ -215,7 +215,10 @@
 		Assuming all the random numbers are integers.\\
 		If the random number can be decimals, the simulation result is\\
 		\colorbox{yellow}{${P(\{\text{second player wins}\}) = 0.528}$}\\
-		
+		The difference between simulation results of simulation in integers and decimals is because of the probability that first and second player have the same number is more obvious when we use integers in simulation.
+		The condition when first and second player start the game is not equivalent. The first player always starts at ${S=0}$. The rule to the second player is equivalent to that stop when ${S>100}$ but the start point is ${S = X}$, ${X}$ is the residual of the first player.
+		Since second player's turn ends by the larger numbers in the first trial is higher than the first player, the chance of the second player has larger last number is higher than first player.
+	 		
 	\end{enumerate}
 	\item
 	\mysolu
@@ -228,13 +231,14 @@
 	${P(L_1|E)=\frac{P(EL_1)}{P(E)}=0.47}$\\
 	${P(L_2|E)=\frac{P(EL_2)}{P(E)}=0.53}$\\
 	\myansw
-	The rober new values for ${P(L_1)}$ and ${P(L_2)}$ is\\
+	The robot new values for ${P(L_1)}$ and ${P(L_2)}$ is\\
 	\colorbox{yellow}{
 		${P(L_1')=P(L_1|E)=0.47}$
 	}\\
 	\colorbox{yellow}{
 		${P(L_2')=P(L_2|E)=0.53}$
 	}\\
+
 	\item
 	\mysolu
 	For each location we can define the probability of the cell at that location is ${P(L_i)}$; the probability of a cell records two bars is ${P(B)}$\\
