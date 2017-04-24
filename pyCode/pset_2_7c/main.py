@@ -7,7 +7,8 @@ def lastNumber(n, minRandom, maxRandom, startNum):
     global randomHist
     totalN = startNum
     while totalN < n:
-        lastN = random.randint(1,100)
+        lastN = random.uniform(minRandom, maxRandom)
+        #lastN = random.randint(1,100)
         randomHist[int(lastN)-1] = randomHist[int(lastN)-1]+ 1
         #lastN = round(random.uniform(minRandom+0.5, maxRandom+0.5))
         #lastN = random.uniform(minRandom , maxRandom )

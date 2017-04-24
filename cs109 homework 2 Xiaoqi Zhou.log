@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 APR 2017 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  23 APR 2017 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -315,6 +315,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--90
  []
 
 
+Overfull \hbox (37.71672pt too wide) in paragraph at lines 102--107
+[][][][][][] 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 102--107
 
  []
@@ -371,92 +376,97 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 195.
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--236
+Underfull \hbox (badness 10000) in paragraph at lines 212--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--239
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 256--265
+Underfull \hbox (badness 10000) in paragraph at lines 259--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--273
+Underfull \hbox (badness 10000) in paragraph at lines 268--276
 
  []
 
 
-Overfull \hbox (1.0147pt too wide) in paragraph at lines 273--282
+Overfull \hbox (1.0147pt too wide) in paragraph at lines 276--285
 \OT1/cmr/m/n/10 Define $[]$, so $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--282
+Underfull \hbox (badness 10000) in paragraph at lines 276--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--296
+Underfull \hbox (badness 10000) in paragraph at lines 290--299
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 296--300
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--303
+Underfull \hbox (badness 10000) in paragraph at lines 303--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--310
+Underfull \hbox (badness 10000) in paragraph at lines 306--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--317
+Underfull \hbox (badness 10000) in paragraph at lines 317--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--324
+Underfull \hbox (badness 10000) in paragraph at lines 320--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--332
+Underfull \hbox (badness 10000) in paragraph at lines 327--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--340
+Underfull \hbox (badness 10000) in paragraph at lines 337--343
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--347
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 345--350
 
  []
 
-[5] <bat.png, id=31, 2160.07pt x 1439.3775pt>
+<bat.png, id=31, 2160.07pt x 1439.3775pt>
 File: bat.png Graphic file (type png)
  <use bat.png>
-Package pdftex.def Info: bat.png used on input line 356.
+Package pdftex.def Info: bat.png used on input line 359.
 (pdftex.def)             Requested size: 375.80544pt x 250.40134pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--357
+Underfull \hbox (badness 10000) in paragraph at lines 352--360
 
  []
 
 <GT.jpg, id=33, 1190.4475pt x 1051.93pt>
 File: GT.jpg Graphic file (type jpg)
  <use GT.jpg>
-Package pdftex.def Info: GT.jpg used on input line 371.
+Package pdftex.def Info: GT.jpg used on input line 374.
 (pdftex.def)             Requested size: 234.8775pt x 207.54121pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--372
+Underfull \hbox (badness 10000) in paragraph at lines 361--375
 
  []
 
@@ -464,11 +474,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--372
 Here is how much of TeX's memory you used:
  3122 strings out of 493014
  42297 string characters out of 6133351
- 119530 words of memory out of 5000000
+ 118530 words of memory out of 5000000
  6610 multiletter control sequences out of 15000+600000
  7109 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,43p,317b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,43p,317b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/loca
 l/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/t
@@ -484,7 +494,7 @@ onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/font
 s/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 urw/courier/ucrr8a.pfb>
-Output written on "cs109 homework 2 Xiaoqi Zhou.pdf" (7 pages, 303374 bytes).
+Output written on "cs109 homework 2 Xiaoqi Zhou.pdf" (7 pages, 303924 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream

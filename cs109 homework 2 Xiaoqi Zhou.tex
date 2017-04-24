@@ -67,7 +67,7 @@
 		%2.a
 		\item 
 		\mysolu
-		${P(E)=\frac{4\times 3}{52 \times 51}=0.0181}$\\
+		${P(E)=\frac{4\times 3}{52 \times 51}=0.00452}$\\
 		The Ace of Spades can be either the first card or the second card\\
 		${P(F)=\frac{1\times 51 + 51 \times 1}{52 \times 51}=0.0385}$\\
 		${P(EF)=\frac{1\times 3 + 3 \times 1}{52 \times 51}=0.00226}$\\
@@ -85,7 +85,7 @@
 		${P(G)=1-P(G^c)=0.149}$\\
 		\myansw
 		\colorbox{yellow}{
-			${P(E|G)=\frac{P(EG)}{P(G)}=\frac{P(E)}{P(G)}=0.121}$
+			${P(E|G)=\frac{P(EG)}{P(G)}=\frac{P(E)}{P(G)}=0.0303}$
 		}\\
 	\end{enumerate}
 	\item
@@ -101,7 +101,7 @@
 		\item
 		\myansw
 		\colorbox{yellow}{
-			${P((E_1 \cup E_2 \cup E_3)|T)=P(E_1|T) \cup P(E_2|T) \cup P(E_3|T) = p_1+p_2+p_3 - (p_1 p_2+p_3 p_2+p_3 p_1)}$
+			${P((E_1 \cup E_2 \cup E_3)|T)=P(E_1|T) \cup P(E_2|T) \cup P(E_3|T) = p_1+p_2+p_3 - (p_1 p_2+p_3 p_2+p_3 p_1)+p_1p_2p_3}$
 		}\\
 		\item
 		\mysolu
@@ -135,7 +135,7 @@
 		\myansw
 		The probability that exactly 3 server is still working after on year is\\
 		\colorbox{yellow}{
-			${P(E_3)={5 \choose 3}P(G_i)=6p^3(1-p)^2}$
+			${P(E_3)={5 \choose 3}P(G_i)=10p^3(1-p)^2}$
 		}\\
 		\item
 		\mysolu
@@ -149,7 +149,7 @@
 	\end{enumerate}
 	\item
 	\mysolu
-	The probability of all the bit in a ${n}$ bit string is\\
+	The probability of all the bit is 0 in a ${n}$ bit string is\\
 	${P(F) = (1-p)^n}$\\
 	Then the probability that at least one 1 in the string is\\
 	${P(E) = 1- P(F)= 1-(1-p)^n}$\\
@@ -211,7 +211,10 @@
 		\item
 		\mysolu
 		After run the simulation, the probability that second player wins is\\
-		\colorbox{yellow}{${0.516}$}
+		\colorbox{yellow}{${P(\{\text{second player wins}\}) = 0.516}$}\\
+		Assuming all the random numbers are integers.\\
+		If the random number can be decimals, the simulation result is\\
+		\colorbox{yellow}{${P(\{\text{second player wins}\}) = 0.528}$}\\
 		
 	\end{enumerate}
 	\item
@@ -238,7 +241,7 @@
 	${P(B|L_i)=\frac{P(BL_i)}{P(L_i)}}$\\
 	${P(BL_i)=P(L_i)P(B|L_i)}$\\
 	Since the summation of the probability that records two bars at all the locations is the total probability that the cell can have two bars.\\
-	${P{Li|B}=\frac{P(BL_i)}{P(B)}=\frac{P(L_i)P(B|L_i)}{\sum\limits_{i=1}^n P(L_i)P(B|L_i)}}$\\
+	${P(Li|B)=\frac{P(BL_i)}{P(B)}=\frac{P(L_i)P(B|L_i)}{\sum\limits_{i=1}^n P(L_i)P(B|L_i)}}$\\
 	In the program, we can calculate ${P(BL_i)}$ in each location and get the summation of them.\\
 	\myansw
 	The probabilities of all 16 cells is\\
@@ -276,7 +279,7 @@
 		${P(G')=P(G|H^c)=\frac{P(GH^c)}{P(H^c)}=\frac{\frac{1}{3}}{\frac{2}{3}}=\frac{1}{2}}$\\
 		\myansw
 		By using the previous conclusion\\
-		${P(I^c)= P(I^c|G)P(G)+P(I^c|G^c)P(G^c)=\frac{1}{2}\times \frac{1}{2}+\frac{1}{3} \times 0 = \frac{1}{4}}$\\
+		${P(I^c)= P(I^c|G')P(G)+P(I^c|G'^c)P(G'^c)=\frac{1}{2}\times \frac{1}{2}+0 \times \frac{1}{3} = \frac{1}{4}}$\\
 		The probability that their next child will also have brown eyes is\\
 		\colorbox{yellow}{${P(I)=1-P(I^c) = \frac{3}{4}}$} \\
 		
@@ -355,13 +358,13 @@
 			\centering
 			\includegraphics[width=0.8\textwidth]{bat.png}
 		\end{figure}
-		Becasue of the high dynamic range of the smalpe counts in different gene pattern, the Y scale of the plot is set to log. We can find that ${G_5}$ only exist when both ${G_3}$ and ${G_4}$ exist.\\
+		Becasue of the high dynamic range of the sample counts in different gene pattern, the Y scale of the plot is set to log. We can find that ${G_5}$ only exist when both ${G_3}$ and ${G_4}$ exist.\\
 		${P(G_5|G_3G_4)=0.800}$\\
 		${P(G_3G_4|G_5) =0.982}$\\
 		\colorbox{yellow}{${G_3 \cap G_4}$ is the necessity condition of ${G_5}$}\\
 		${P(G_3G_4) = 0.401}$ vs.${P(G_4)P(G_4)=0.402}$\\ 
 		\colorbox{yellow}{${G_3}$ and ${G_4}$ are independent.}\\
-		Given ${P(T|G_5) = 0.900}$, not all the ${T}$ have ${G_5}$. If we still believe ${G_5}$ is necessity condition of ${T}$, we can analysis the fales positive rate of the trait test.\\
+		Given ${P(T|G_5) = 0.900}$, not all the bats with ${T}$ have ${G_5}$. If we still believe ${G_5}$ is necessity condition of ${T}$, we can analysis the fales positive rate of the experiment or test for trait.\\
 		If ${P\{\text{false positive}\} > P{(T|G_5^c)}=0.049}$, it is very likely the trait without ${G_5}$ is casued by fales positive in the test.\\
 		Same as the samples have ${G_5}$ but not trait.\\
 		If ${P\{\text{false negative}\}>P(G_5|T)=0.020}$, it is very likely that the sample have ${G_5}$ but not have ${T}$ is casued by false negative in the test.\\
