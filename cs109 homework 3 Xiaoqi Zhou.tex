@@ -1,0 +1,64 @@
+%CS 109 Problem Set Xiaoqi Zhou
+
+
+\documentclass{article}
+	% basic article document class
+	% use percent signs to make comments to yourself -- they will not show up.
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+	% packages that allow mathematical formatting
+
+\usepackage{graphicx}
+\usepackage{float}
+	% package that allows you to include graphics
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\frenchspacing
+	% one space after periods
+
+\usepackage{fancyhdr}
+	% allows custom headers
+
+\pagestyle{fancy}
+
+\lhead{CS 109, Stanford University \\ Problem Set \#2} 
+\rhead{Xiaoqi Zhou (xqzhou@stanford.edu) \\ 06237147}
+\usepackage{color}
+\usepackage{courier}
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0.4pt} 
+	%footer
+\newcommand{\myansw}{\textbf{Answer:}\\}
+\newcommand{\mysolu}{\textbf{Solution:}\\}
+\begin{document}
+\thispagestyle{fancy} %shows header/footer
+
+\begin{enumerate}
+	\item
+	\begin{enumerate}
+		%1.a
+		\item
+		\mysolu
+		We calculate after how many rounds, the game provide will use up all their money.\\
+		${m = log_{2}X}$\\
+		Then we can derive the expectation of payoff of the game by considering 2 parts, normal payoff and the limited payoff after provider run out of money\\
+		${E(Y) = \sum\limits_{n = 1}^{m}(\frac{1}{2})^{n+1}2^n+\frac{1}{2}^{n+1} X= m  \frac{1}{2} + \frac{1}{2}^{n+1} X}$\\
+		\myansw
+		${E(Y) = m \part{title} \frac{1}{2}+ \frac{1}{2}^{n+1} X}$
+
+
+	\end{enumerate}
+
+
+%	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
+
+
+
+\end{enumerate}
+
+\newpage
+
+
+\end{document}
