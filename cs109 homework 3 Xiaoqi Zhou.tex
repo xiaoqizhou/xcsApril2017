@@ -42,15 +42,64 @@
 		\item
 		\mysolu
 		We calculate after how many rounds, the game provide will use up all their money.\\
-		${m = log_{2}X}$\\
-		Then we can derive the expectation of payoff of the game by considering 2 parts, normal payoff and the limited payoff after provider run out of money\\
-		${E(Y) = \sum\limits_{n = 1}^{m}(\frac{1}{2})^{n+1}2^n+\frac{1}{2}^{n+1} X= m  \frac{1}{2} + \frac{1}{2}^{n+1} X}$\\
+		${m = \lfloor log_{2}X \rfloor}$\\
+		Then we can derive the expectation of payoff of the game by considering 2 parts, normal payoff and the limited payoff after provider run out of money, after you win more or equal to ${2^m}$, no matter what happend, you will win ${X}$\\
+		${E[Y] = \sum\limits_{n = 0}^{m}(\frac{1}{2})^{n+1}2^n+\frac{1}{2}^{n+1} X= (m+1)  \frac{1}{2} + \frac{1}{2}^{m+1} X}$\\
 		\myansw
-		${E(Y) = m \part{title} \frac{1}{2}+ \frac{1}{2}^{n+1} X}$
-
+		${m =2}$\\
+		\colorbox{yellow}{
+			${E[Y] = 3 \times  \frac{1}{2}+ \frac{1}{2}^{3} \times 5=2.125}$
+		}\\
+		\item
+		\myansw
+		${m =8}$\\
+			\colorbox{yellow}{
+			${E[Y] = 9 \times  \frac{1}{2}+ \frac{1}{2}^{8} \times 500=5.477}$
+		}\\
+	
+		\myansw
+		${m =12}$\\
+		\colorbox{yellow}{
+			${E[Y] = 13 \times  \frac{1}{2}+ \frac{1}{2}^{13} \times 4096=7}$
+		}\\
 
 	\end{enumerate}
 
+	\item
+	\mysolu
+	The expectation of new users in 5 minutes is ${E(X) = 2}$.
+	The expectation of gain for the trip can be preseted as\\
+	${E[(X+1) \times \$6 - \$7]=E[X]\times \$6 -\$1}$\\
+	\myansw
+	The expectation of Lyft to make in this trip is\\
+	\colorbox{yellow}{
+		${E[X] \times \$ 6 - \$1 = \$11}$
+	}\\
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		The possibility that ${x}$ bit are corrupted is\\
+		${P(X=x)={2n \choose x}p^x(1-p)^{(2n-x)}}$\\
+		\myansw
+		The probability that the message ${ss}$ is received without any corruption is\\
+		\colorbox{yellow}{${P(X=0)=(1-0.05)^8=0.663}$}\\
+		\item 
+		\mysolu
+		For each first string ${s}$ which has any corruption bit, if the second time the corruption bit(s) are exactly the same, we can not detect that problem\\
+		\myansw
+		The probability that we can not detect the corrupted bit(s)\\
+		\colorbox{yellow}{$P(E) = \sum\limits_{x = 1}^n {n \choose x}(p^x(1-p)^{(n-x)})^2$}\\
+		\colorbox{yellow}{${P(E) = \sum\limits_{x = 1}^4 {4 \choose x}(0.05^x(1-0.05)^{(4-x)})^2=0.0074}$}\\
+		\item
+		\mysolu
+		The probability that recipient can detect the corruption took place is\\
+		${P(F) = 1 - P(X=0) - P(E)}$\\
+		\myansw
+		\colorbox{yellow}{${P(F) = 1 - (1-p)^{2n} - \sum\limits_{x = 1}^n {n \choose x}(p^x(1-p)^{(n-x)})^2 = 1 - 0.663 - 0.0074 = 0.329}$}\\
+		
+
+	\end{enumerate}
 
 %	\item A product in math mode: \[\prod\limits_{i=1}^n x = x^n\]
 
