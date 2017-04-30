@@ -214,7 +214,49 @@
 
 	\item
 	\begin{enumerate}
-		\item 
+		\item
+		\mysolu
+		For each return number from 1 to 10 we can derive the probability\\
+		$P(X=i) = 0.1$\\
+		$P(X = -1) = 0$\\
+		\myansw
+		\colorbox{yellow}{$E[X] = \sum\limits_{i=0}^{9}0.1i =4.5$}\\
+		\item
+		\mysolu
+		The only chance that the founction can return is when arr[mid] = key. So the result would as same as the previous\\
+		$P(X=i) = 0.1 | 1\leq i \leq 10$\\
+		\myansw
+		\colorbox{yellow}{$E[X] = \sum\limits_{i=0}^{9}0.1i =4.5$}\\
+	\end{enumerate}
+	\item 
+	\begin{enumerate}
+		\item
+		\mysolu
+		Since the total hash trial of the strings ${3m = 72000}$ are very high and the probability for each string hashed into certain bucket is very low ${\frac{1}{8000}}$ . We can use binomial distribution function to derive the probability of each number of strings that hashed into a certain bucket.
+		$P{X=i} \approx e^{- \lambda}\frac{\lambda^i}{i!}$\\
+		${\lambda = 3m \frac{1}{n} = 72000 \times 
+		\frac{1}{8000} = 9}$\\
+		\myansw
+		The probability that the first bucket has 0 strings hashed into it is\\
+		\colorbox{yellow}{
+			${P{X = 0} =\approx e^{-9}\frac{9^0}{0!}=1.234\times 10^{-4}}$
+		}\\
+		\item
+		\myansw
+		The probability that the first bucket has 10 or fewer strings hashed to it is\\
+		\colorbox{yellow}{
+			${P{X \leq 10} = \sum\limits_{i=0}^{10} e^{-9}\frac{9^i}{i!}=0.706}$
+		}
+		\item
+		\mysolu
+		For a bloom filter which have ${i}$ bits are 1s, the probability ${P(E)}$ of a string that is reported in the set incorrectly is\\
+		${P(E|\{X = i\})= (\frac{i}{n})^3}$\\
+		${P(E\{X=i\}) = \frac{i^3}{n^3} \frac{e^{-\lambda}\lambda^i}{i!}}$\\
+		${P(E) = \sum\limits_{i=0}^{+\infty}P(E\{X=i\})=\frac{1}{n^3} \sum\limits_{i=0}^{+\infty}\frac{i^3e^{-\lambda}\lambda^i}{i!}}$\\
+		${P(E) = \frac{\lambda}{n^3}\sum\limits_{i=1}^{+\infty}\frac{i^2e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}=\frac{\lambda}{n^3}\sum\limits_{i=1}^{+\infty}(\frac{(i-1)^2e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}+\frac{2(i-1)e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}+\frac{e^{-\lambda}\lambda^{(i-1)}}{(i-1)!})}$\\
+		${P(E) = \frac{\lambda}{n^3}(E[X^2] + 2E[X]-1)=\frac{\lambda}{n^3}(\lambda(\lambda+1) + 2\lambda+1)=\frac{1}{n^3}(\lambda^3+3\lambda^2+\lambda)}$\\
+		\myansw
+		${P(E) = \frac{1}{8000^3}(9^3+3\times 9^2+9)=1.916 \times 10^{-9}}$
 		
 	\end{enumerate}
 

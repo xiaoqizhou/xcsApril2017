@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2017.4.6)  29 APR 2017 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210) (preloaded format=pdflatex 2017.4.6)  30 APR 2017 15:03
 entering extended mode
 **"./cs109 homework 3 Xiaoqi Zhou.tex"
 ("cs109 homework 3 Xiaoqi Zhou.tex"
@@ -380,28 +380,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--214
 
  []
 
-[3] ("cs109 homework 3 Xiaoqi Zhou.aux") ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--225
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 225--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--245
+
+ []
+
+[4] ("cs109 homework 3 Xiaoqi Zhou.aux") ) 
 Here is how much of TeX's memory you used:
  3074 strings out of 493333
  41592 string characters out of 3136591
- 117339 words of memory out of 3000000
+ 118339 words of memory out of 3000000
  6560 multiletter control sequences out of 15000+200000
  5647 words of font info for 23 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,43p,277b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,11n,43p,337b,381s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb>
-Output written on "cs109 homework 3 Xiaoqi Zhou.pdf" (3 pages, 117026 bytes).
+pe1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb>
+Output written on "cs109 homework 3 Xiaoqi Zhou.pdf" (4 pages, 138171 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
