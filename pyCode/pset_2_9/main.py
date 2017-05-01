@@ -42,4 +42,3 @@ with open('cellPhoneResult.csv', 'w') as f:
     for row in pNewList:
         print(row)
         writer.writerow(row)
-

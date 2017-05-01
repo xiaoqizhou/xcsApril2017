@@ -280,6 +280,28 @@
 		\myansw
 		\colorbox{yellow}{${P(E) \approx 1 - \frac{3}{4000}\times e^{-18}\times 4000 \approx 1 - 4.57 \times 10^{-8} \approx 1}$}\\
 		
+		
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		Since all the polls are equivalent, we can just add all the samples that vote A and divide by the total sample number.\\
+		\myansw
+		The probability that a random person in France votes for candidate A is\\
+		\colorbox{yellow}{$P(A) = \frac{4881}{7453}=0.655$}\\
+		\item
+		\mysolu
+		Since the total number of people is too large, we can use 64888 total population and iterate the experiment for 10000 times.\\
+		The result is all the 10000 experiment show that A wins.\\
+		\myansw
+		\colorbox{yellow}{$P(A) \approx 1.00$}\\
+		The distribution of votes for A is a Poisson distribution with $\lambda = np = 42502158.76$\\
+		Another way to solve this problem is, we can treat the distribution of votes for A as a normal distribution which has $\mu = \lambda$,$\sigma^2 = \lambda$ \\
+		$F(0.5\lambda) = \Phi(\frac{0.5 \lambda - \lambda}{\sqrt{\lambda}}) = 1 - \Phi(\frac{0.5 \lambda}{\sqrt{\lambda}})$\\
+		Since $\lambda$ is very large\\
+		$\Phi(\frac{0.5 \lambda}{\sqrt{\lambda}})=0$\\
+		\colorbox{yellow}{$P(A)=F(0.5\lambda) \approx 1$}\\
 	\end{enumerate}
 
 \end{enumerate}
