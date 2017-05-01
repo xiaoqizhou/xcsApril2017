@@ -233,34 +233,52 @@
 		\item
 		\mysolu
 		Since the total hash trial of the strings ${3m = 72000}$ are very high and the probability for each string hashed into certain bucket is very low ${\frac{1}{8000}}$ . We can use binomial distribution function to derive the probability of each number of strings that hashed into a certain bucket.
-		$P{X=i} \approx e^{- \lambda}\frac{\lambda^i}{i!}$\\
+		$P\{X=i\} \approx e^{- \lambda}\frac{\lambda^i}{i!}$\\
 		${\lambda = 3m \frac{1}{n} = 72000 \times 
 		\frac{1}{8000} = 9}$\\
 		\myansw
 		The probability that the first bucket has 0 strings hashed into it is\\
 		\colorbox{yellow}{
-			${P{X = 0} =\approx e^{-9}\frac{9^0}{0!}=1.234\times 10^{-4}}$
+			${P\{X = 0\} =\approx e^{-9}\frac{9^0}{0!}=1.234\times 10^{-4}}$
 		}\\
 		\item
 		\myansw
 		The probability that the first bucket has 10 or fewer strings hashed to it is\\
 		\colorbox{yellow}{
-			${P{X \leq 10} = \sum\limits_{i=0}^{10} e^{-9}\frac{9^i}{i!}=0.706}$
+			${P\{X \leq 10\} = \sum\limits_{i=0}^{10} e^{-9}\frac{9^i}{i!}=0.706}$
 		}
 		\item
 		\mysolu
-		For a bloom filter which have ${i}$ bits are 1s, the probability ${P(E)}$ of a string that is reported in the set incorrectly is\\
-		${P(E|\{X = i\})= (\frac{i}{n})^3}$\\
-		${P(E\{X=i\}) = \frac{i^3}{n^3} \frac{e^{-\lambda}\lambda^i}{i!}}$\\
-		${P(E) = \sum\limits_{i=0}^{+\infty}P(E\{X=i\})=\frac{1}{n^3} \sum\limits_{i=0}^{+\infty}\frac{i^3e^{-\lambda}\lambda^i}{i!}}$\\
-		${P(E) = \frac{\lambda}{n^3}\sum\limits_{i=1}^{+\infty}\frac{i^2e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}=\frac{\lambda}{n^3}\sum\limits_{i=1}^{+\infty}(\frac{(i-1)^2e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}+\frac{2(i-1)e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}+\frac{e^{-\lambda}\lambda^{(i-1)}}{(i-1)!})}$\\
-		${P(E) = \frac{\lambda}{n^3}(E[X^2] + 2E[X]-1)=\frac{\lambda}{n^3}(\lambda(\lambda+1) + 2\lambda+1)=\frac{1}{n^3}(\lambda^3+3\lambda^2+\lambda)}$\\
+		For a bloom filter which have ${X = i}$ bits are 0s, the probability ${P(E)}$ of a string that is reported in the set incorrectly is\\
+		${P(E|\{X = i\})= (1-\frac{i}{n})^3}$\\
+		For each bit, the probability that remains to 0s after 24000 strings added is\\
+		$p= 1.234\times 10^{-4}$\\
+		Let $\lambda = np = 0.9873$\\
+		The probability that $X = i$ bucket have no string been hashed into is\\
+		${P(\{X=i\}) =\frac{e^{-\lambda}\lambda^i}{i!}}$\\
+		${P(E\{X=i\}) = \frac{(n-i)^3}{n^3} \frac{e^{-\lambda}\lambda^i}{i!}}$\\
+		${P(E) = \sum\limits_{i=0}^{+\infty}P(E\{X=i\})=
+			 \sum\limits_{i=0}^{+\infty}\frac{e^{-\lambda}\lambda^i}{i!}-
+			 \frac{1}{n}\sum\limits_{i=0}^{+\infty}\frac{3ie^{-\lambda}\lambda^i}{i!}+
+			 \frac{1}{n^2}\sum\limits_{i=0}^{+\infty}\frac{3i^2e^{-\lambda}\lambda^i}{i!}-
+			\frac{1}{n^3} \sum\limits_{i=0}^{+\infty}\frac{i^3e^{-\lambda}\lambda^i}{i!}}$\\
+		
+		${P(E) =
+			1-
+			\frac{3}{n}E[X]+
+			\frac{3}{n^2}E[X^2]-
+			\frac{1}{n^3}E[X^3]}$\\
+		${\frac{1}{n^3}E[X^3] = \frac{\lambda}{n^3}\sum\limits_{i=1}^{+\infty}\frac{i^2e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}=\frac{\lambda}{n^3}\sum\limits_{i=1}^{+\infty}(\frac{(i-1)^2e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}+\frac{2(i-1)e^{-\lambda}\lambda^{(i-1)}}{(i-1)!}+\frac{e^{-\lambda}\lambda^{(i-1)}}{(i-1)!})}$\\
+		${\frac{1}{n^3}E[X^3] = \frac{\lambda}{n^3}(E[X^2] + 2E[X]-1)=\frac{\lambda}{n^3}(\lambda(\lambda+1) + 2\lambda+1)=\frac{1}{n^3}(\lambda^3+3\lambda^2+\lambda)}$\\
+		${P(E) = 1 - \frac{3}{n}\lambda + \frac{3}{n^2}\lambda(\lambda+1) - \frac{1}{n^3}(\lambda^3+3\lambda^2+\lambda)}$\\
+		${P(E) \approx 1 - \frac{3}{n}\lambda }$\\
 		\myansw
-		${P(E) = \frac{1}{8000^3}(9^3+3\times 9^2+9)=1.916 \times 10^{-9}}$
+		\colorbox{yellow}{${P(E) \approx 1 - \frac{3}{8000}\times 0.9873=0.9996}$}\\
 		\item
 		\mysolu
-		Let $n = 4000$, then $\lambda = 18$\\
-		${P(E) = \frac{1}{4000^3}(18^3+3\times 18^2+18)=1.066 \times 10^{-7}}$
+		Let $n = 4000$, then $\lambda = e^{-18}\times 4000$\\
+		\myansw
+		\colorbox{yellow}{${P(E) \approx 1 - \frac{3}{4000}\times e^{-18}\times 4000 \approx 1 - 4.57 \times 10^{-8} \approx 1}$}\\
 		
 	\end{enumerate}
 
