@@ -11,8 +11,8 @@ if 0
 end
 
 if 1
-    m = 24000;
-    n = 8000;
+    m = 25000;
+    n = 100000;
     kk = 3;
     lo = 100000;
     bitListSum = zeros(lo,1);
@@ -28,6 +28,7 @@ if 1
                 if x == 1
                     bitOneSum(loop,1) = bitOneSum(loop,1)+1;
                 end
+
             end
         end
         for j = 1:kk
