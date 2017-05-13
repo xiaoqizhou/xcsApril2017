@@ -23,7 +23,7 @@
 
 \pagestyle{fancy}
 
-\lhead{CS 109, Stanford University \\ Problem Set \#2} 
+\lhead{CS 109, Stanford University \\ Problem Set \#3} 
 \rhead{Xiaoqi Zhou (xqzhou@stanford.edu) \\ 06237147}
 \usepackage{color}
 \usepackage{courier}
@@ -303,12 +303,12 @@
 		The result is all the 10000 experiment show that A wins.\\
 		\myansw
 		\colorbox{yellow}{$P(A) \approx 1.00$}\\
-		The distribution of votes for A is a Poisson distribution with $\lambda = np = 42502158.76$\\
-		Another way to solve this problem is, we can treat the distribution of votes for A as a normal distribution which has $\mu = \lambda$,$\sigma^2 = \lambda$ \\
-		$F(0.5\lambda) = \Phi(\frac{0.5 \lambda - \lambda}{\sqrt{\lambda}}) = 1 - \Phi(\frac{0.5 \lambda}{\sqrt{\lambda}})$\\
+		The distribution of votes for A is a Poisson distribution with $\lambda = np $\\
+		Another way to solve this problem is, we can treat the distribution of votes for A as a normal distribution which has $\mu = np$,$\sigma^2 = np(1-p)$ \\
+		$F(0.5n) = \Phi(\frac{0.5n - np}{\sqrt{np(1-p)}}) = 1 - \Phi(\frac{0.155n}{0.475\sqrt{n}})$\\
 		Since $\lambda$ is very large\\
-		$\Phi(\frac{0.5 \lambda}{\sqrt{\lambda}})=0$\\
-		\colorbox{yellow}{$P(A)=F(0.5\lambda) \approx 1$}\\
+		$\Phi(0.326\sqrt{n})=0$\\
+		\colorbox{yellow}{$P(A)=F(0.5n) \approx 1$}\\
 	\end{enumerate}
 	\item
 	\begin{enumerate}
@@ -350,6 +350,7 @@
 \end{enumerate}
 
 \newpage
+I found there were some mistake in the question 12.b and updated my answers in the night of 5/3.
 
 
 \end{document}

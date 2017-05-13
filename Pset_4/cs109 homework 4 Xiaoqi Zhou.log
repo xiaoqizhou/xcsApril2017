@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  3 MAY 2017 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 MAY 2017 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"cs109 homework 3 Xiaoqi Zhou.tex"
-(./cs109 homework 3 Xiaoqi Zhou.tex
+**"cs109 homework 4 Xiaoqi Zhou.tex"
+(./cs109 homework 4 Xiaoqi Zhou.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -179,8 +179,8 @@ Package color Info: Driver file: pdftex.def on input line 144.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(./cs109 homework 3 Xiaoqi Zhou.aux)
-\openout1 = `"cs109 homework 3 Xiaoqi Zhou.aux"'.
+(./cs109 homework 4 Xiaoqi Zhou.aux)
+\openout1 = `"cs109 homework 4 Xiaoqi Zhou.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
@@ -286,51 +286,26 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 45.
+LaTeX Font Info:    Try loading font information for U+msa on input line 44.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 45.
+LaTeX Font Info:    Try loading font information for U+msb on input line 44.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 43--54
+Underfull \hbox (badness 10000) in paragraph at lines 42--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--79
-
- []
-
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 83.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--100
+Underfull \hbox (badness 10000) in paragraph at lines 57--60
 
  []
 
@@ -343,104 +318,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 104--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--157
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 161--171
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--186
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--225
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--265
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 280--287
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 295--301
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--312
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--324
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--328
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 336--345
-
- []
-
-[6] (./cs109 homework 3 Xiaoqi Zhou.aux) ) 
+[2] (./cs109 homework 4 Xiaoqi Zhou.aux) ) 
 Here is how much of TeX's memory you used:
  3066 strings out of 493014
  41579 string characters out of 6133351
- 119530 words of memory out of 5000000
+ 111530 words of memory out of 5000000
  6565 multiletter control sequences out of 15000+600000
  5647 words of font info for 23 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,43p,348b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,43p,260b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fon
@@ -453,10 +339,10 @@ ublic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy7.pfb>
-Output written on "cs109 homework 3 Xiaoqi Zhou.pdf" (6 pages, 138192 bytes).
+Output written on "cs109 homework 4 Xiaoqi Zhou.pdf" (2 pages, 104076 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

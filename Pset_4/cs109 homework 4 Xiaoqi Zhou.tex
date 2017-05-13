@@ -1,0 +1,75 @@
+%CS 109 Problem Set Xiaoqi Zhou
+
+
+\documentclass{article}
+	% basic article document class
+	% use percent signs to make comments to yourself -- they will not show up.
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+	% packages that allow mathematical formatting
+
+\usepackage{graphicx}
+\usepackage{float}
+	% package that allows you to include graphics
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\frenchspacing
+	% one space after periods
+
+\usepackage{fancyhdr}
+	% allows custom headers
+
+\pagestyle{fancy}
+
+\lhead{CS 109, Stanford University \\ Problem Set \#4} 
+\rhead{Xiaoqi Zhou (xqzhou@stanford.edu) \\ 06237147}
+\usepackage{color}
+\usepackage{courier}
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0.4pt} 
+	%footer
+\newcommand{\myansw}{\textbf{Answer:}\\}
+\newcommand{\mysolu}{\textbf{Solution:}\\}
+\begin{document}
+\thispagestyle{fancy} %shows header/footer
+
+\begin{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		The number of users should be a poisson distribution which is\\
+		${X \sim Poi(\lambda)}$ where ${\lambda = 5.5}$\\
+		The probability that more than 7 users will sign-up for the social networking site in the next miniute is\\
+		${P(E) = 1 - P(E^c) = 1 - P\{X \leq 7\} = 1 - \sum\limits_{i = 0}^7 \frac{e^{-5.5}5.5^i}{i!}}$\\
+		\myansw
+		We can also use normal distribution to approximate the probability\\
+		\colorbox{yellow}{${P\{X > 7\} = 1 - \Phi(\frac{7-5.5}{\sqrt{5.5}}) = 1 - 0.7389 = 0.2611 }$}\\
+		
+		\item
+		\myansw
+		The probability that more than 13 users will sign-up for the social networking site in the next 2 minute is\\
+		\colorbox{yellow}{${P\{X > 13\} = 1 - P\{X \leq 13\} = 1 - \Phi(\frac{13 - 5.5\times2}{\sqrt{5.5 \times 2}}) = 1 - 0.7257 = 0.2743}$}\\
+		
+		\item
+		\myansw
+		The probability that more than 15 users will sign-up for the social networking site in the next 3 minute is\\
+		\colorbox{yellow}{${P\{X > 15\} = 1 - P\{X \leq 15\} = 1 - \Phi(\frac{15 - 5.5\times3}{\sqrt{5.5 \times 3}}) = \Phi(0.3693) = 0.6433}$}\\		
+		
+	\end{enumerate}
+	\item 
+	\begin{enumerate}
+		\item
+		
+		
+	\end{enumerate}
+\end{enumerate}
+
+
+\newpage
+I found there were some mistake in the question 12.b and updated my answers in the night of 5/3.
+
+
+\end{document}
