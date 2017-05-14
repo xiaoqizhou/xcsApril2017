@@ -27,6 +27,7 @@
 \rhead{Xiaoqi Zhou (xqzhou@stanford.edu) \\ 06237147}
 \usepackage{color}
 \usepackage{courier}
+\usepackage{relsize}
 \cfoot{\thepage}
 \renewcommand{\footrulewidth}{0.4pt} 
 	%footer
@@ -37,6 +38,7 @@
 
 \begin{enumerate}
 	\item
+	%1
 	\begin{enumerate}
 		\item
 		\mysolu
@@ -60,16 +62,132 @@
 		
 	\end{enumerate}
 	\item 
+	%2
 	\begin{enumerate}
 		\item
+		\mysolu
+		${\mathlarger{\int_{0}^{1}{\int_{0}^{x}}c\frac{y}{x}dydx}=\mathlarger{\int_{0}^{1}\frac{1}{2}c\frac{x^2}{x}dx=\frac{1}{4}cx^2\big|_{0}^{1}}=\frac{1}{4}c=1}$\\
+		\myansw
+		\colorbox{yellow}{${c = 4}$}\\
 		
+		\item
+		\mysolu
+		${f_X(x) = \mathlarger{\int_{0}^{x}4\frac{y}{x}dy}=\mathlarger{2c\frac{y^2}{x}\big|_{0}^{x}}=2x}$\\
+		${f_Y(y) = \mathlarger{\int_{y}^{1}4\frac{y}{x}dx}=\mathlarger{cy\ln(x)\big|_{y}^{1}}=-4y\ln(y)}$\\
+		${f_{XY}(x,y) \neq f_X(x)f_Y(y)}$\\
+		\myansw
+		\colorbox{yellow}{X and Y are not independent}\\
+		\item
+		\myansw
+		\colorbox{yellow}{${f_X(x) =2x}$ }\\
+		\item
+		\myansw
+		\colorbox{yellow}{${f_Y(y) =-4y\ln(y)}$ }\\
+		\item
+		\myansw
+		\colorbox{yellow}{${E[X] = \mathlarger{\int_{0}^{1}2x^2dx}=\frac{2}{3}x^3\big|_{0}^{1}=\frac{2}{3}}$}\\
+		\item
+		\myansw
+		${E[Y] = \mathlarger{\int_{0}^{1}-4y^2\ln(y)dy=-4(\ln(y)\int_{0}^{1}y^2dy-\int_{0}^{1}(\frac{1}{y}\frac{1}{3}y^3)dy)}}$\\
+		${E[Y] = \mathlarger{-4(\ln(y)\frac{1}{3}y^3-\frac{1}{9}y^3)\big|_{0}^{1}} = \frac{4}{9}}$
+
+	\end{enumerate}
+	\item 
+	\begin{enumerate}
+		\item
+		\myansw
+		\colorbox{yellow}{${P\{X_1 + X_2 \geq 5000\} = P\{\frac{X_1+X_2 - 2200 \times 2}{\sqrt{52900 \times 2}} \geq \frac{5000 - 2200 \times 2}{\sqrt{52900 \times 2}} \}
+		=1-\Phi (1.84) = 0.033}$}\\
+		To be more accurate, we should use ${> 4999.5}$ instead of ${\geq 5000}$. The result in this particular case has no significant difference.
+		\item
+		\mysolu
+		${P\{X \geq 2000  \} = 1 - \Phi(\frac{2000 - 2200}{\sqrt{52900}})=  \Phi(0.87) = 0.808}$\\
+		\myansw
+		The probability that the weekly number of visitors exceeds 2000 in at least 2 of the next 3 weeks is\\
+		\colorbox{yellow}{${{3 \choose 2}p^2(p-1)+{3 \choose 1}p^3}=0.904$}\\
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\myansw
+		\colorbox{yellow}{${A \sim N(\mu_1+\mu_2, \sigma_1^2+\sigma_2^2)}$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{${B \sim N(5\mu_1+2, 25\sigma_1^2)}$}\\
+		\item 
+		\mysolu
+		${C_a = aX}$\\
+		${C_b = -bY}$\\
+		${C_c = c^2Z}$\\
+		${C_a \sim N(a\mu_1, a^2\sigma_1^2)}$\\
+		${C_b \sim N(-b\mu_1, b^2\sigma_2^2)}$\\
+		${C_c \sim N(c^2\mu_1, c^4\sigma_3^2)}$\\
+		\myansw
+		\colorbox{yellow}{${C \sim N(a\mu_1 - b\mu_2 + c^2\mu_3, a^2\sigma_1^2+b^2\sigma_2^2+c^4\sigma_3^2)}$}\\
 		
 	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\myansw
+		\colorbox{yellow}{${\mathlarger{f_{XY}(x,y) = \left\lbrace \begin{array}{rcl}\frac{1}{6} \frac{1}{x} & & x, y  \in \{1,2,3,4,5,6\}\\
+					0 & & x,y \notin \{1,2,3,4,5,6\}\\
+					\end{array}\right.}}$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{${\mathlarger{P(X = j|Y = i) = \left\lbrace \begin{array}{rcl}\frac{1}{6} \frac{1}{j} & & i \leq j\\
+					0 & & i > j\\
+					\end{array}\right.}}$}\\
+		\item
+		\mysolu
+		${f_X(x) = \left\lbrace \begin{array}{rcl}\frac{1}{6} & & x \in \{1,2,3,4,5,6\}\\
+			0 & & x\notin \{1,2,3,4,5,6\}\\
+			\end{array}\right.}$\\
+		${f_Y(y) = \left\lbrace \begin{array}{rcl}\frac{1}{6}\sum\limits_{i = y}^6 \frac{1}{y} & & y \in \{1,2,3,4,5,6\}\\
+			0 & & x\notin \{1,2,3,4,5,6\}\\
+			\end{array}\right.}$\\
+		${f_{XY}(x,y) \neq f_X(x)f_Y(y)}$\\
+		\myansw
+		\colorbox{yellow}{X and Y are NOT independent}\\	
+		
+	\end{enumerate}
+	\item
+	\mysolu
+	Since the expectation of the distance are symmetrical when the package is dropped off in the 4 different quadrants. Let D' = the distance the robot travels to get to the package in first quadrants.\\
+	${f_D'(d) = \frac{1}{4}(\frac{1}{5})^2}$\\
+	${E[D']=\mathlarger{\frac{1}{100}\int_{0}^{5} \int_{0}^{5} (x+y) dxdy=\frac{1}{100}\int_{0}^{5} \frac{25}{2}+5ydy=\frac{125}{100}}}$\\
+	\myansw
+	${E[D] = 4E[D'] = 4 \frac{125}{100} = 5}$\\
+	\item
+	\mysolu
+	The probability that "max update" is executed in each loop ${p_i =P(E_i)= 2^i}$, because the probability that the current number is higher than each of the previous numbers are all equal to ${\frac{1}{2}}$\\
+	Let\\
+	${I_i = \left\lbrace \begin{array}{rcl}1 & & E_i \text{ occurs}\\
+		0 & &  \text{otherwise}\\
+		\end{array}\right.}$\\
+	\myansw
+	The expected number of times that "max update" is executed is\\
+	\colorbox{yellow}{${E[X] = \sum\limits_{i = 0}^{n-1}E[I_i] = \sum\limits_{i = 0}^{n-1}p_i = 2 - (\frac{1}{2})^{n-1}}$}
+	
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		${E[X] = \frac{a}{a+b} = 0.5}$\\
+		${Var[X] =\frac{ab}{(a+b)^2(a+b+1)}}$\\
+		\myansw
+		\colorbox{yellow}{${a = b = \frac{2}{17}}$}\\
+	\end{enumerate}
+	
+	
+	
+	
+	
 \end{enumerate}
 
 
 \newpage
-I found there were some mistake in the question 12.b and updated my answers in the night of 5/3.
+
 
 
 \end{document}
