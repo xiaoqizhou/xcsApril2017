@@ -176,8 +176,98 @@
 		${E[X] = \frac{a}{a+b} = 0.5}$\\
 		${Var[X] =\frac{ab}{(a+b)^2(a+b+1)}}$\\
 		\myansw
-		\colorbox{yellow}{${a = b = \frac{2}{17}}$}\\
+		\colorbox{yellow}{${a = b = 4}$}\\
+		\item
+		\mysolu
+		${\text{X}|\text{13 flips resulting in 8 heads and 5 tails} \sim Beta(4+8, 4+5)}$\\
+		\myansw
+		\colorbox{yellow}{
+			${\mathlarger{f(x) = \left\lbrace \begin{array}{rcl} \frac{1}{B(12,9)}x^{11}(1-x)^{8} & & \text{if} 0<x<1\\
+				0 & & \text{otherwise}\\
+				\end{array}\right.}}$
+		}\\
+		\item
+		\mysolu
+		${a' = 4 + 8 = 12}$\\
+		${b' = 4 + 4 = 8}$\\
+		\myansw
+		\colorbox{yellow}{${E[X|\text{12 flips resulting in 8 heads and 4 tails}] = \frac{a}{a+b} = 0.6}$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{${Var(X|\text{12 flips resulting in 8 heads and 4 tails}) = \frac{ab}{(a+b)^2(a+b+1)}=}$}\\
+		
 	\end{enumerate}
+	\item
+	\mysolu
+	By post processing the 2 data file we can find\\
+	For randomFlips1.txt\\
+	${P_1\{\text{Flip = Head}\} = 0.49 }$\\
+	${P_1\{\text{Flip = Tail}\} = 0.51 }$\\
+	${P_1\{\text{Flip = Tail|previous flip = head}\} = 0.694 }$\\
+	${P_1\{\text{Flip = Tail|previous flip = Tail}\} = 0.329 }$\\
+	${P_1\{\text{Flip = Head|previous flip = head}\} = 0.306 }$\\
+	${P_1\{\text{Flip = Head|previous flip = Tail}\} = 0.671 }$\\
+
+	From the previous results, we can find that the flips are not independent to the previous flip result.\\
+	For example\\
+	Let\\
+	$P_1(H') = P_1\{\text{previous flip = head}\}$\\
+	$P_1(HH') = P_1(H|H')P(H') = 0.306 \times 0.49 = 0.15$\\
+	$P(H)p(H') = 0.51 \times 0.51 = 0.26  \neq P(HH')$\\
+	For randomFlips2.txt\\
+	${P\{\text{Flip = Head}\} = 0.503 }$\\
+	${P\{\text{Flip = Tail}\} = 0.497 }$\\
+	${P\{\text{Flip = Tail|previous flip = head}\} = 0.51 }$\\
+	${P\{\text{Flip = Tail|previous flip = Tail}\} = 0.5 }$\\
+	${P\{\text{Flip = Head|previous flip = head}\} = 0.49 }$\\
+	${P\{\text{Flip = Head|previous flip = Tail}\} = 0.5 }$\\
+	For the 2nd file, we can find that the flips are independent to the previous flip result.\\
+	\myansw
+	\colorbox{yellow}{Sequence 2 is a better random generator, because of the independence between flip results in row.}\\
+	
+	\item
+	\begin{enumerate}
+		\item
+		\myansw
+		\colorbox{yellow}{${E[X] = 7.41}$}\\
+		\colorbox{yellow}{${E[Y] = 8.03}$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{${E[X^2] = 58.84}$}\\
+		\colorbox{yellow}{${E[Y^2] = 68.17}$}\\	
+		\item
+		\mysolu
+		${\mu_A = 7.41}$,	${\sigma_A^2 = E[X^2] - E[X]^2 =  3.98}$\\
+		${\mu_B = 8.03}$,	${\sigma_B^2 = E[Y^2] - E[Y]^2 = 3.68}$\\
+		\myansw
+		\colorbox{yellow}{${X \sim N(7.41, 3.98)}$}\\
+		\colorbox{yellow}{${Y \sim N(8.03, 3.68)}$}\\
+		\item
+		\mysolu
+		Given writer is A, for each keystroke in email, the probability that the duration equals to the timing information is
+		${P(X_i = x_i|A) =P(E_i|A)= \frac{1}{\sqrt{2\pi}\sigma_A}e^{-(x_i - \mu_A)^2/2\sigma_A^2}\epsilon}$ \\
+		${\ln(P(E_i|A)) = \ln(\frac{\epsilon}{\sqrt{2\pi}\sigma_A})-(x_i - \mu_A)^2/2\sigma_A^2}$\\
+		So, the probability that the email is written given writer is A is\\
+		${\ln(P(E|A)) = \ln(\prod\limits_{i = 1}^{n}P(E_i|A)= \sum\limits_{i = 1}^{n}\ln(P(E_i|A))}$\\
+		${\ln(P(E|A)) = n\ln(\frac{\epsilon}{\sqrt{2\pi}\sigma_A}) - \sum\limits_{i = 1}^{n}(x_i - \mu_A)^2/2\sigma_A^2}$\\
+		The probability that the email is written given writer is B is\\
+		${\ln(P(E|B)) = n\ln(\frac{\epsilon}{\sqrt{2\pi}\sigma_B}) - \sum\limits_{i = 1}^{n}(x_i - \mu_A)^2/2\sigma_B^2}$\\
+		
+		The probability that the writer is A given the email has been written is\\
+		${P(A|E) = \frac{P(AE)}{P(E)}=\frac{P(E|A)P(A)}{P(E)}}$\\
+		The probability that the writer is B given the email has been written is\\
+		${P(B|E) = \frac{P(E|B)P(B)}{P(E)}}$\\
+		${\frac{P(A|E)}{P(B|E)} = \frac{0.5P(E|A)}{0.5P(E|B)} = \frac{P(E|A)}{P(E|B)}}$\\
+		${\frac{P(A|E)}{P(B|E)} = e^{\ln(P(E|A))-\ln(P(E|B))}}$\\
+		\myansw
+		
+		\colorbox{yellow}{${\frac{P(A|E)}{P(B|E)} = e^{-9.42} = 8.1 \times 10^{-5}}$}\\
+		
+	\end{enumerate}
+
+	
+	
+
 	
 	
 	
