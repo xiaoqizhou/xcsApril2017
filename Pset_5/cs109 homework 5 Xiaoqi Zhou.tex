@@ -120,19 +120,115 @@
 	\begin{enumerate}
 		\item 
 		\myansw
-		\colorbox{yellow}{$f(x) = \frac{1}{4\sqrt{2\pi}}e^{-(x-98)^2/32}$}\\
+		Let X be the true distance of the satellite\\
+		\colorbox{yellow}{$f_X(x) = \frac{1}{4\sqrt{2\pi}}e^{-(x-98)^2/32}$}\\
 		\item
 		\myansw
 		Let Y be the measured distance\\
-		\colorbox{yellow}{$f(y = 100|x = t) = \frac{1}{2\sqrt{2\pi}}e^{-(100-t)^2/8}$}\\
+		\colorbox{yellow}{$f_{Y|X}(y = 100|x = t) = \frac{1}{2\sqrt{2\pi}}e^{-(100-t)^2/8}$}\\
 		\item
 		\mysolu
-		$f(x, y = 100) =f(y = 100|x )f(x)=\frac{1}{2\sqrt{2\pi}}e^{-(100-x)^2/8}\times \frac{1}{4\sqrt{2\pi}}e^{-(x-98)^2/32} $\\
-		$\mathlarger{f(x | y = 100) = \frac{f(y = 100, x)}{f(y = 100)} = \frac{f(y = 100, x)}{\mathlarger{\int_{-\infty}^{+\infty}f(y = 100)dx}}}$\\
+		Let X' be the posterior belief of the true distance of satellite\\
+		$f_{XY}(x, y = 100) =f_{Y|X}(y = 100|x )f_X(x)=\frac{1}{2\sqrt{2\pi}}e^{-(100-x)^2/8}\times \frac{1}{4\sqrt{2\pi}}e^{-(x-98)^2/32} $\\
+		$\mathlarger{f_{X'}(x') = f_{X|Y}(x=x' | y = 100) = \frac{f_{XY}(y = 100, x=x')}{f_Y(y = 100)} = \frac{f_{XY}(x=x',y = 100)}{\mathlarger{\int_{-\infty}^{+\infty}f_{XY}(y = 100)dx}}}$\\
+		Let\\
+		$\mathlarger{C = \frac{1}{\mathlarger{\int_{-\infty}^{+\infty}f_{XY}(x,y = 100)dx}}}$\\
+		\myansw
+		\colorbox{yellow}{$\mathlarger{f_{X'}(x') = C\frac{1}{16\pi^2}e^{\frac{-(4(100-x')^2+(x'-98)^2)}{32}}}$}\\
 	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		Let $X_n$ be the total value of $n$ rolling before any value $\geq$ 3 is rolled\\
+		$E[X] = \sum\limits_{i = 0}^{\infty}E[X_i]+4.5$\\
+		Let $Y$ be the value when for each rolling when value $<$ 3\\
+		$E[Z] = 1.5$\\
+		$E[X_i] = (\frac{1}{3})^i(iE[Z]) = 1.5i(\frac{1}{3})^i$\\
+		\myansw
+		\colorbox{yellow}{$E[X] = \sum\limits_{i = 0}^{\infty} 1.5i(\frac{1}{3})^i+4.5 = 1.5\frac{\frac{1}{3}}{(1-\frac{1}{3})^2}+4.5=5.625$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{$E[Y] = \sum\limits_{i = 0}^{\infty} i(\frac{1}{3})^i+1 = \frac{\frac{1}{3}}{(1-\frac{1}{3})^2}+1=1.75$}\\		
+		
+		
+	\end{enumerate}
+	\item
+	\mysolu
+	$E[Y^2] = E[Y^2|X = 1]P(X = 1)+E[Y^2|X = 2]P(X = 2)+E[Y^2|X = 2]P(X = 2)$\\
+	$E[Y^2] = E[3^2]\frac{1}{3}+E[(Y+5)^2]\frac{1}{3}+E[(Y+7)^2]\frac{1}{3}$\\
+	$3E[Y^2] = 9+E[Y^2]+10E[Y]+25 + E[Y^2]+14E[Y]+49$\\
+	$E[Y^2] = 443$\\
+	\myansw
+	\colorbox{yellow}{$Var(Y) = E[Y^2]-E[Y]^2 = 443 - 225 = 218$}\\
+	\item
+	\begin{enumerate}
+		\item
+		\mysolu
+		$E[n\overline{A}] = n\mu_A = 20 \times 50 = 1000$\\
+		$Var(n\overline{A}) = n^2\frac{\sigma_A^2}{n} = n\sigma_A^2 = 2000$\\
+		$P(n\overline{A} < 950) = \Phi(\frac{950 - 1000}{\sqrt{2000}}) = 1 - \Phi(\frac{50}{44.72})= 1- 0.8686$\\
+		\colorbox{yellow}{$P(n\overline{A} < 950)= 0.1314$}\\
+		\item 
+		$E[n\overline{B}] = n\mu_B = 20 \times 52 = 1040$\\
+		$Var(n\overline{B}) = n^2\frac{\sigma_B^2}{n} = n\sigma_B^2 = 4000$\\
+		$P(n\overline{B} < 950) = \Phi(\frac{950 - 1040}{\sqrt{4000}}) = 1 - \Phi(\frac{90}{44.72})= 1- 0.9207$\\
+		\colorbox{yellow}{$P(n\overline{B} < 950)= 0.0793$}\\
+		\item
+		Let $C = A - B$\\
+		$E[n\overline{C}] = n\mu_C= \mu_A - \mu_B = -40 $\\
+		$Var(n\overline{C}) = n\sigma_C^2 = n(\sigma_A^2 + \sigma_B^2) = 6000$\\
+		\myansw
+		\colorbox{yellow}{$P(C < 0) = F_C(0) = \Phi(\frac{0-(-40)}{\sqrt{6000}})=0.6985$}\\
+	\end{enumerate}
+	\item
+	\mysolu
+	Let $Y = \sum\limits_{i = 1}^{79}X_i$\\
+	$E[Y] = 79E[X] = 79\times3.5 = 276.5 $\\
+	$Var(Y) = 79Var(X)  $\\
+	$Var(X) = E[X^2] - E[X]^2 = 2.92$\\
+	$Var(Y) = 230.68$\\
+	$Y \sim N(276.5, 230.68)$\\
+	When the first 79 rolls have sum lower than 300, at least 80 rolls are necessary to reach a sum that exceeds 300.\\
+	$P(Y \leq 299.5) = F_Y(299.5)  = \Phi(\frac{299.5 - 276.5}{sqrt{230.68}})$\\
+	\myansw
+	\colorbox{yellow}{$P(Y \leq 299.5) = 0.9332$}\\
 	
 	
-	
+	\item
+	\begin{enumerate}
+		\item
+		\myansw 
+		\colorbox{yellow}{$P(X \geq 85) \leq \frac{E[X]}{85} = 0.882$}\\
+		\item 
+		\mysolu
+		$P (65 \leq X \leq 85) > P(|X - 75|< 10) = 1 - P(|X - 75|\geq 10)$\\
+		$P(|X - 75| \geq 10) \leq \frac{Var(X)}{10^2} = 0.25$\\
+		$0.75 \leq 1 - P(|X - 75|\geq 10)< P (65 \leq X \leq 85) $\\
+		\myansw
+		\colorbox{yellow}{$ P (65 \leq X \leq 85) > 0.75$}\\
+		\item
+		\mysolu
+		Let $Y = \overline{X}$\\
+		$E[Y] = E[X] = 75$\\
+		$Var(Y) = \frac{Var(X)}{n} = \frac{25}{n}$
+		$P(|Y - 75| \geq 5) \leq \frac{Var(Y)}{5^2} = \frac{\frac{25}{n}}{25}\leq 0.1$\\
+		\myansw
+		$\frac{1}{n}\leq 0.1$\\
+		The number of students would have to take the midterm in order to ensure 90\% probability that the class average would be within 5 of 75 is\\
+		\colorbox{yellow}{$n \geq 10$}\\
+		\item
+		\mysolu
+		$P(-5 \leq \overline{X} - E[X] \leq 5) = \Phi(\frac{5}{\frac{\sigma}{\sqrt{n}}})-\Phi(\frac{-5}{\frac{\sigma}{\sqrt{n}}})= 2\Phi(\frac{5}{\frac{5}{\sqrt{n}}}) - 1 \geq 0.9$\\
+		$\Phi(\sqrt{n})>0.95$
+		$\sqrt{n}>1.65$\\
+		\myansw
+		The number of students would have to take the midterm in order to ensure 90\% probability that the class average would be within 5 of 75 is\\
+		\colorbox{yellow}{$n =3>2.72 $}\\
+		
+		
+		
+	\end{enumerate}
 	
 	
 \end{enumerate}
