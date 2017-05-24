@@ -28,6 +28,7 @@
 \usepackage{color}
 \usepackage{courier}
 \usepackage{relsize}
+\usepackage{verbatim}
 \cfoot{\thepage}
 \renewcommand{\footrulewidth}{0.4pt} 
 	%footer
@@ -228,6 +229,186 @@
 		
 		
 		
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\myansw
+		\colorbox{yellow}{$P(S = true|G = female, C= 1) = 0.968$}\\
+		\colorbox{yellow}{$P(S = true|G = female, C= 1) = 0.921$}\\
+		\colorbox{yellow}{$P(S = true|G = female, C= 1) = 0.5$}\\
+		\colorbox{yellow}{$P(S = true|G = female, C= 1) = 0.369$}\\
+		\colorbox{yellow}{$P(S = true|G = female, C= 1) = 0.157$}\\
+		\colorbox{yellow}{$P(S = true|G = female, C= 1) = 0.137$}\\
+		\item
+		\mysolu
+		Total third class children is 53, and 22 of them survived.\\
+		We can use the conditional of all the third class passengers as a prior distribution\\
+		Total third class passenger number is 487, 119 of them survived\\
+		Let\\
+		$a = 487 + 1 = 488$\\
+		$b = 119 + 1 = 120$\\
+		$m = 22$\\
+		$n = 31$\\
+		\myansw
+		$S \sim Beta(a+m, b+n)$\\
+		\colorbox{yellow}{$S \sim Beta(510, 151)$}\\
+		\item
+		\myansw
+		\colorbox{yellow}{$E[X|C=1]= 84.15$}\\
+		\colorbox{yellow}{$E[X|C=1]= 20.66$}\\
+		\colorbox{yellow}{$E[X|C=1]= 13.71$}\\
+
+		
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\myansw
+		\colorbox{yellow}{$\overline{X} = 69.22$}\\
+		\item
+		\mysolu
+		$Y = \overline{X}$\\
+		$S^2 = \sum\limits_{i = 1}^{n}\frac{(Y_i - \overline{Y})}{n-1}$\\
+		
+		\textbf{Code:}\\
+		\begin{verbatim}
+		n = 100000 #repeat 100000 loops
+		grade_mean_array = numpy.zeros(n)
+		index = [0]*5
+		for i in range(0,n):
+		    for j in range(0,5):
+		        #Generate 5 random index for each grades
+		        index[j] = int(numpy.floor(numpy.random.rand()*10000))
+		    grade_mean_array[i] = numpy.mean(grade_array[index])#Get mean of the 5 grades
+		#Calculate the expectation of all the mean values
+		grade_mean_expectation = numpy.mean(grade_mean_array)
+		grade_mean_s = float(0)
+		for i in range(0, len(grade_mean_array)):
+		    grade_mean_s = grade_mean_s \
+		                    + ((grade_mean_array[i] - grade_mean_expectation)**2)\
+			                /(len(grade_mean_array)-1) #Calculate S^2 
+
+
+		print("grade mean expectation: %f"%(grade_mean_expectation))
+		print("grade mean variance: %f"%(grade_mean_s))	
+		
+
+		\end{verbatim}
+
+		\myansw
+		$E[Y] = 69.22$\\
+		\colorbox{yellow}{$S^2=101.18$}\\
+		\item
+		\mysolu
+		$Z = median(X)$\\
+		$S^2 = \sum\limits_{i = 1}^{n}\frac{(Z_i - \overline{Z})}{n-1}$\\
+		
+		\textbf{Code:}\\
+		\begin{verbatim}
+		n = 100000 #repeat 100000 loops
+		grade_median_array = numpy.zeros(n)
+		index = [0]*5
+		for i in range(0,n):
+		    for j in range(0,5):
+		        # Generate 5 random index for each grades
+		        index[j] = int(numpy.floor(numpy.random.rand()*10000))
+		    # Get median of the 5 grades
+		grade_median_array[i] = numpy.median(grade_array[index])
+		#Calculate the expectation of all the median values
+		grade_median_expectation = numpy.mean(grade_median_array)
+
+		grade_median_s = float(0)
+		for i in range(0, len(grade_median_array)):
+		    grade_median_s = grade_median_s \
+		                     + ((grade_median_array[i] - grade_median_expectation)**2)\
+		                     /(len(grade_median_array)-1) #Calculate S^2
+
+
+		print("grade mean expectation: %f"%(grade_median_expectation))
+		print("grade mean variance: %f"%(grade_median_s))
+		
+		
+		\end{verbatim}
+		
+		\myansw
+		$E[Z] = 73.60$\\
+		\colorbox{yellow}{$S^2=56.04$}\\
+		\item
+		\myansw
+		$E[Y] = 69.22$\\
+		$E[Z] = 73.60$\\
+		\colorbox{yellow}{The expected median of 5 grades is different than the expected mean of 5 grades.}\\
+		\item
+		\mysolu
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{pset_5_13_e_1.png}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{pset_5_13_e_2.png}
+		\end{figure}
+		\myansw
+		\colorbox{yellow}{Using median of 5 grades is a better way to assign scores,} because the distribution is more like a normal distribution
+		
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item
+		\myansw
+		The outcome of activity2 is not independent to activity1. All the student have already learned activity1 when learned activity2. It is difficult to justify outcome of activity2 separately.\\
+		\item
+		\myansw
+		The outcome may not only depend on different activities but also the geographic distribution of the students. The result will be biased by different between the students from eastern vs. western hemisphere.\\
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item 
+		Let X be the outcome of activity1; Y be the outcome of activity2\\
+		$E[X] =144.93 $\\
+		$E[Y] = 153.13$\\
+		\myansw
+		\colorbox{yellow}{$|E[X]-E[Y]| = 8.2$}\\
+		\item
+		\textbf{Code:}\\
+		\begin{verbatim}
+		n = 100000 #repeat 100000 times bootstraping
+		new_diff = numpy.zeros(n)
+		p_num = float(0)
+		for i in range(0,n):
+		    #select same size of activity1 from uniform dataset
+		    new_selection_1 = numpy.array(random.sample(outcome, int(num_1)))
+		    #select same size of activity2 from uniform dataset
+		    new_selection_2 = numpy.array(random.sample(outcome, int(num_2)))
+		    #calculate mean of new activity1
+		    new_mean_1 = numpy.mean(new_selection_1)
+		    #calculate mean of new activity2
+		    new_mean_2 = numpy.mean(new_selection_2)
+		    new_diff[i] = abs(new_mean_1 - new_mean_2)
+		    #Compare the new observed difference with the pre-calculated difference
+		    if new_diff[i] >= diff:
+		        p_num = p_num + 1
+		#Calculate P-Value
+		p_value = p_num/n
+		print("P-Value = %f"%(p_value))
+		\end{verbatim}
+		\myansw
+		\colorbox{yellow}{$P-Value = 0.00478$}\\
+		\item
+		\mysolu
+		We can just separate all the students data into 3 groups first based on the background category (link two .csv file by using first column number). Then calculate the mean difference and p-values.\\
+		\myansw
+		For "more" experience group\\
+		\colorbox{yellow}{$|E[X]-E[Y]| = 28.42$}\\
+		\colorbox{yellow}{$P-Value = 0.0000$}\\
+		For "average" experience group\\
+		\colorbox{yellow}{$|E[X]-E[Y]| = 24.98$}\\
+		\colorbox{yellow}{$P-Value = 0.00005$}\\
+		For "less" experience group\\
+		\colorbox{yellow}{$|E[X]-E[Y]| = 26.02$}\\
+		\colorbox{yellow}{$P-Value = 0.0000$}\\
+		From the Result we can find that the difference of 2 activities are more significant if we separate the students in different catagory. That means the activities have different outcome distribution in different catagory groups. Mixing the data from all 3 group will lead us to a biased result.
 	\end{enumerate}
 	
 	
