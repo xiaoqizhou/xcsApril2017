@@ -48,17 +48,17 @@
 		${P(E) = 1 - P(E^c) = 1 - P\{X \leq 7\} = 1 - \sum\limits_{i = 0}^7 \frac{e^{-5.5}5.5^i}{i!}}$\\
 		\myansw
 		We can also use normal distribution to approximate the probability\\
-		\colorbox{yellow}{${P\{X > 7\} = 1 - \Phi(\frac{7-5.5}{\sqrt{5.5}}) = 1 - 0.7389 = 0.2611 }$}\\
+		\colorbox{yellow}{${P\{X > 7.5\} = 1 - \Phi(\frac{7.5-5.5}{\sqrt{5.5}}) = 1 - 0.8032 = 0.1968 }$}\\
 		
 		\item
 		\myansw
 		The probability that more than 13 users will sign-up for the social networking site in the next 2 minute is\\
-		\colorbox{yellow}{${P\{X > 13\} = 1 - P\{X \leq 13\} = 1 - \Phi(\frac{13 - 5.5\times2}{\sqrt{5.5 \times 2}}) = 1 - 0.7257 = 0.2743}$}\\
+		\colorbox{yellow}{${P\{X > 13.5\} = 1 - P\{X \leq 13.5\} = 1 - \Phi(\frac{13.5 - 5.5\times2}{\sqrt{5.5 \times 2}}) = 1 - 0.7734 = 0.2266}$}\\
 		
 		\item
 		\myansw
 		The probability that more than 15 users will sign-up for the social networking site in the next 3 minute is\\
-		\colorbox{yellow}{${P\{X > 15\} = 1 - P\{X \leq 15\} = 1 - \Phi(\frac{15 - 5.5\times3}{\sqrt{5.5 \times 3}}) = \Phi(0.3693) = 0.6433}$}\\		
+		\colorbox{yellow}{${P\{X > 15.5\} = 1 - P\{X \leq 15.5\} = 1 - \Phi(\frac{15.5 - 5.5\times3}{\sqrt{5.5 \times 3}}) = \Phi(0.2462) = 0.5987}$}\\		
 		
 	\end{enumerate}
 	\item 
@@ -113,25 +113,25 @@
 		\colorbox{yellow}{${A \sim N(\mu_1+\mu_2, \sigma_1^2+\sigma_2^2)}$}\\
 		\item
 		\myansw
-		\colorbox{yellow}{${B \sim N(5\mu_1+2, 25\sigma_1^2)}$}\\
+		\colorbox{yellow}{${B \sim N(5\mu_1+2, 5\sigma_1^2)}$}\\
 		\item 
 		\mysolu
 		${C_a = aX}$\\
 		${C_b = -bY}$\\
 		${C_c = c^2Z}$\\
-		${C_a \sim N(a\mu_1, a^2\sigma_1^2)}$\\
-		${C_b \sim N(-b\mu_1, b^2\sigma_2^2)}$\\
-		${C_c \sim N(c^2\mu_1, c^4\sigma_3^2)}$\\
+		${C_a \sim N(a\mu_1, a\sigma_1^2)}$\\
+		${C_b \sim N(-b\mu_1, b\sigma_2^2)}$\\
+		${C_c \sim N(c^2\mu_1, c^2\sigma_3^2)}$\\
 		\myansw
-		\colorbox{yellow}{${C \sim N(a\mu_1 - b\mu_2 + c^2\mu_3, a^2\sigma_1^2+b^2\sigma_2^2+c^4\sigma_3^2)}$}\\
+		\colorbox{yellow}{${C \sim N(a\mu_1 - b\mu_2 + c^2\mu_3, a\sigma_1^2+b\sigma_2^2+c^2\sigma_3^2)}$}\\
 		
 	\end{enumerate}
 	\item
 	\begin{enumerate}
 		\item
 		\myansw
-		\colorbox{yellow}{${\mathlarger{f_{XY}(x,y) = \left\lbrace \begin{array}{rcl}\frac{1}{6} \frac{1}{x} & & x, y  \in \{1,2,3,4,5,6\}\\
-					0 & & x,y \notin \{1,2,3,4,5,6\}\\
+		\colorbox{yellow}{${\mathlarger{f_{XY}(x,y) = \left\lbrace \begin{array}{rcl}\frac{1}{6} \frac{1}{x} & & x  \in \{1,2,3,4,5,6\}, y \leq x\\
+					0 & & \text{Otherwise}\\
 					\end{array}\right.}}$}\\
 		\item
 		\myansw
@@ -144,7 +144,7 @@
 			0 & & x\notin \{1,2,3,4,5,6\}\\
 			\end{array}\right.}$\\
 		${f_Y(y) = \left\lbrace \begin{array}{rcl}\frac{1}{6}\sum\limits_{i = y}^6 \frac{1}{y} & & y \in \{1,2,3,4,5,6\}\\
-			0 & & x\notin \{1,2,3,4,5,6\}\\
+			0 & & y\notin \{1,2,3,4,5,6\}\\
 			\end{array}\right.}$\\
 		${f_{XY}(x,y) \neq f_X(x)f_Y(y)}$\\
 		\myansw
@@ -160,14 +160,15 @@
 	${E[D] = 4E[D'] = 4 \frac{125}{100} = 5}$\\
 	\item
 	\mysolu
-	The probability that "max update" is executed in each loop ${p_i =P(E_i)= 2^i}$, because the probability that the current number is higher than each of the previous numbers are all equal to ${\frac{1}{2}}$\\
+	The probability that "max update" is executed in each loop ${p_i =P(E_i)= \frac{1}{i+1}}$, because the probability that all of the previous independent numbers is\\
+	${ \frac{i!}{(i+1)!}=\frac{1}{i+1}}$\\
 	Let\\
 	${I_i = \left\lbrace \begin{array}{rcl}1 & & E_i \text{ occurs}\\
 		0 & &  \text{otherwise}\\
 		\end{array}\right.}$\\
 	\myansw
 	The expected number of times that "max update" is executed is\\
-	\colorbox{yellow}{${E[X] = \sum\limits_{i = 0}^{n-1}E[I_i] = \sum\limits_{i = 0}^{n-1}p_i = 2 - (\frac{1}{2})^{n-1}}$}
+	\colorbox{yellow}{${E[X] = \sum\limits_{i = 0}^{n-1}E[I_i] = \sum\limits_{i = 0}^{n-1}p_i = \sum\limits_{i = 1}^{n}\frac{1}{i}}$}
 	
 	\item
 	\begin{enumerate}
@@ -191,10 +192,10 @@
 		${a' = 4 + 8 = 12}$\\
 		${b' = 4 + 4 = 8}$\\
 		\myansw
-		\colorbox{yellow}{${E[X|\text{12 flips resulting in 8 heads and 4 tails}] = \frac{a}{a+b} = 0.6}$}\\
+		\colorbox{yellow}{${E[X|\text{12 flips resulting in 8 heads and 4 tails}] = \frac{a'}{a'+b'} = 0.6}$}\\
 		\item
 		\myansw
-		\colorbox{yellow}{${Var(X|\text{12 flips resulting in 8 heads and 4 tails}) = \frac{ab}{(a+b)^2(a+b+1)}=}$}\\
+		\colorbox{yellow}{${Var(X|\text{12 flips resulting in 8 heads and 4 tails}) = \frac{a'b'}{(a'+b')^2(a'+b'+1)}=0.0114}$}\\
 		
 	\end{enumerate}
 	\item
@@ -213,7 +214,7 @@
 	Let\\
 	$P_1(H') = P_1\{\text{previous flip = head}\}$\\
 	$P_1(HH') = P_1(H|H')P(H') = 0.306 \times 0.49 = 0.15$\\
-	$P(H)p(H') = 0.51 \times 0.51 = 0.26  \neq P(HH')$\\
+	$P_1(H)p_1(H') = 0.51 \times 0.51 = 0.26  \neq P_1(HH')$\\
 	For randomFlips2.txt\\
 	${P\{\text{Flip = Head}\} = 0.503 }$\\
 	${P\{\text{Flip = Tail}\} = 0.497 }$\\
@@ -221,6 +222,8 @@
 	${P\{\text{Flip = Tail|previous flip = Tail}\} = 0.5 }$\\
 	${P\{\text{Flip = Head|previous flip = head}\} = 0.49 }$\\
 	${P\{\text{Flip = Head|previous flip = Tail}\} = 0.5 }$\\
+	$P_2(HH') = P_2(H|H')P(H') = 0.25$\\
+	$P_2(H)p_2(H') =  P_2(HH')$\\
 	For the 2nd file, we can find that the flips are independent to the previous flip result.\\
 	\myansw
 	\colorbox{yellow}{Sequence 2 is a better random generator, because of the independence between flip results in row.}\\
@@ -249,9 +252,9 @@
 		${\ln(P(E_i|A)) = \ln(\frac{\epsilon}{\sqrt{2\pi}\sigma_A})-(x_i - \mu_A)^2/2\sigma_A^2}$\\
 		So, the probability that the email is written given writer is A is\\
 		${\ln(P(E|A)) = \ln(\prod\limits_{i = 1}^{n}P(E_i|A)= \sum\limits_{i = 1}^{n}\ln(P(E_i|A))}$\\
-		${\ln(P(E|A)) = n\ln(\frac{\epsilon}{\sqrt{2\pi}\sigma_A}) - \sum\limits_{i = 1}^{n}(x_i - \mu_A)^2/2\sigma_A^2}$\\
+		${\ln(P(E|A)) = n\ln(\frac{\epsilon}{\sqrt{2\pi}\sigma_A}) - \sum\limits_{i = 1}^{n}(x_i - \mu_A)^2/2\sigma_A^2=-248.57}$\\
 		The probability that the email is written given writer is B is\\
-		${\ln(P(E|B)) = n\ln(\frac{\epsilon}{\sqrt{2\pi}\sigma_B}) - \sum\limits_{i = 1}^{n}(x_i - \mu_A)^2/2\sigma_B^2}$\\
+		${\ln(P(E|B)) = n\ln(\frac{\epsilon}{\sqrt{2\pi}\sigma_B}) - \sum\limits_{i = 1}^{n}(x_i - \mu_A)^2/2\sigma_B^2=-243.80}$\\
 		
 		The probability that the writer is A given the email has been written is\\
 		${P(A|E) = \frac{P(AE)}{P(E)}=\frac{P(E|A)P(A)}{P(E)}}$\\
@@ -261,11 +264,50 @@
 		${\frac{P(A|E)}{P(B|E)} = e^{\ln(P(E|A))-\ln(P(E|B))}}$\\
 		\myansw
 		
-		\colorbox{yellow}{${\frac{P(A|E)}{P(B|E)} = e^{-9.42} = 8.1 \times 10^{-5}}$}\\
+		\colorbox{yellow}{${\frac{P(A|E)}{P(B|E)} = e^{-4.77} = 0.0085}$}\\
 		
 	\end{enumerate}
 
-	
+	\item 
+	\begin{enumerate}
+		\item
+		\myansw
+		${P\{X > 7.5\} = 1 - P\{X \leq 7.5\} = 1 -\sum\limits_{i = 0}^{7}P\{X = i\}}$\\
+		\colorbox{yellow}{$P\{X > 7.5\} = 0.06 $}\\
+		\item
+		\mysolu
+		${\mathlarger{\int_{7.5}^{30}\frac{K}{x}dx = 1}}$\\
+		${\mathlarger{K\ln(x)\big|_{0.75}^{30} = 0.06}}$\\
+		${\mathlarger{\int_{7.5}^{30}\frac{C}{x^3}dx = 1}}$\\
+		${\mathlarger{-C\frac{1}{2x^2}\big|_{0.75}^{30} = 0.06}}$\\
+		\myansw
+		\colorbox{yellow}{$K = 0.043$}\\
+		\colorbox{yellow}{$C = 7.2$}\\
+		\item
+		\myansw
+		${\mathlarger{P_1\{X > 10\} = 0.043\ln(x)\big|_{10}^{30}=0.047}}$\\
+		${\mathlarger{P_2\{X > 10\} = -7.2\frac{1}{2x^2}\big|_{10}^{30}=0.032}}$\\
+		\item
+		\mysolu
+		${\mathlarger{E_1[X] =\sum\limits_{i = 0}^{7}P\{X = i\}i + \int_{7.5}^{30}\frac{K}{x}xdx }}$\\
+		${E_1[X] = 3.02 + 0.043x\big|_{7.5}^{30} = 3.99 }$\\
+		${\mathlarger{E_2[X] =\sum\limits_{i = 0}^{7}P\{X = i\}i + \int_{7.5}^{30}\frac{C}{x^3}xdx }}$\\
+		${E_2[X] = 3.02 -7.2\frac{1}{x}\big|_{7.5}^{30} = 3.74 }$\\
+		\myansw
+		\colorbox{yellow}{${E_1[S] = 3.99 }$}\\
+		\colorbox{yellow}{${E_2[S] = 3.74 }$}\\
+				\item
+		\mysolu
+		${\mathlarger{E_1[X^2] =\sum\limits_{i = 0}^{7}P\{X = i\}i^2 + \int_{7.5}^{30}\frac{K}{x}x^2dx }}$\\
+		${E_1[X^2] = 12.06 + \frac{0.043}{2}x^2\big|_{7.5}^{30} = 30.2 }$\\
+		${\mathlarger{E_2[X^2] =\sum\limits_{i = 0}^{7}P\{X = i\}i^2 + \int_{7.5}^{30}\frac{C}{x^3}x^2dx }}$\\
+		${E_2[X^2] = 12.06 +7.2\ln(x)\big|_{7.5}^{30} = 22.04 }$\\
+		\myansw
+		\colorbox{yellow}{${E_1[S^2] = 30.2 }$}\\
+		\colorbox{yellow}{${E_2[S^2] = 22.04 }$}\\
+		
+		
+	\end{enumerate}
 	
 
 	
