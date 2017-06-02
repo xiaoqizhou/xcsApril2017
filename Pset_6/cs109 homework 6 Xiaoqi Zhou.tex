@@ -1,0 +1,107 @@
+%CS 109 Problem Set Xiaoqi Zhou
+
+
+\documentclass{article}
+	% basic article document class
+	% use percent signs to make comments to yourself -- they will not show up.
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+	% packages that allow mathematical formatting
+
+\usepackage{graphicx}
+\usepackage{float}
+	% package that allows you to include graphics
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\frenchspacing
+	% one space after periods
+
+\usepackage{fancyhdr}
+	% allows custom headers
+
+\pagestyle{fancy}
+
+\lhead{CS 109, Stanford University \\ Problem Set \#5} 
+\rhead{Xiaoqi Zhou (xqzhou@stanford.edu) \\ 06237147}
+\usepackage{color}
+\usepackage{courier}
+\usepackage{relsize}
+\usepackage{verbatim}
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0.4pt} 
+	%footer
+\newcommand{\myansw}{\textbf{Answer:}\\}
+\newcommand{\mysolu}{\textbf{Solution:}\\}
+\begin{document}
+\thispagestyle{fancy} %shows header/footer
+
+\begin{enumerate}
+	\item
+	%1
+
+	\mysolu
+	$\hat{\theta} = \underset{\theta}{argmax}LL(\theta)$\\
+	$LL(\theta) = \sum\limits_{i = 1}^{n} \log\lambda e^{-\lambda X_i}=\sum\limits_{i = 1}^{n} \log\lambda -\lambda X_i$\\
+	$\mathlarger{\frac{\delta LL(\lambda)}{\delta \lambda} = \frac{n}{\lambda}-\sum\limits_{i = 1}^{n}X_i} = 0$\\
+	\myansw
+	\colorbox{yellow}{$\mathlarger{\hat{\lambda} = \frac{n}{\sum\limits_{i = 1}^{n}X_i}}$}\\
+	\item
+	\mysolu
+	$Y_i \sim N(\theta_1 X_i + \theta_2, \sigma^2)$\\
+	$LL(\theta_1, \theta_2) = \sum\limits_{i = 1}^{n} \log(\frac{1}{\sqrt{2\pi} \sigma}) - \frac{(Y_i - \theta_1 X_i - \theta_2)^2}{2 \sigma^2}$\\
+	\myansw
+	\colorbox{yellow}{$LL(\theta_1, \theta_2) = -\frac{n}{2} \log(2\pi ) - n\log(\sigma) - \frac{1}{2 \sigma^2}\sum\limits_{i = 1}^{n}(Y_i - \theta_1 X_i - \theta_2)^2$}\\
+	\item
+	\myansw
+	One important assumption of the Naive Bayesian Classifier is all the inputs $X_i$ from the training set it independent. If the first $k$ input of the training are always identical copies.
+	
+	$P(X_1, X_2,...,X_n|Y)\neq \prod\limits_{i = 1}^{n}P(X_i|Y)$\\
+	And we have no data can be used as reference to estimate the $P(X_1, X_2,...,X_n|Y)$, when $X_1, X_2,...X_k$ are NOT copies of each other.
+	\item
+	\begin{enumerate}
+		\item
+		$\mathlarger{\frac{\delta LL(\theta)}{\theta_1}
+			=\frac{\delta LL(\hat{y})}{\hat{y}}
+			 \frac{\delta \hat{y}}{\delta(\theta_3 g + \theta_4 h)}
+			 \frac{\delta(\theta_3 g + \theta_4 h)}{\delta g}
+			 \frac{\delta g}{\delta\theta_1 x}
+			 \frac{\delta \theta_1 x}{\delta \theta_1}
+		 }$\\
+	 	$\mathlarger{\frac{\delta LL(\theta)}{\theta_1}
+	 		=\left[\frac{y}{\hat{^y}}-\frac{1-y}{1-\hat{y}}\right]
+	 		\hat{y}(1-\hat{y})
+	 		\theta_3
+	 		g(1-g)
+	 		x
+ 		}$\\
+	 	$\mathlarger{\frac{\delta LL(\theta)}{\theta_2}
+			=\left[\frac{y}{\hat{^y}}-\frac{1-y}{1-\hat{y}}\right]
+			\hat{y}(1-\hat{y})
+			\theta_4
+			h(1-h)
+			x
+		}$\\ 	
+	 	$\mathlarger{\frac{\delta LL(\theta)}{\theta_3}
+			=\left[\frac{y}{\hat{^y}}-\frac{1-y}{1-\hat{y}}\right]
+			\hat{y}(1-\hat{y})
+			g
+		}$\\
+		$\mathlarger{\frac{\delta LL(\theta)}{\theta_4}
+			=\left[\frac{y}{\hat{^y}}-\frac{1-y}{1-\hat{y}}\right]
+			\hat{y}(1-\hat{y})
+			h
+		}$\\ 
+	\end{enumerate}
+	
+	
+	
+\end{enumerate}
+
+
+\newpage
+
+
+
+\end{document}
