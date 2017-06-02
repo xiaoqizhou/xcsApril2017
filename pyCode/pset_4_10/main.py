@@ -46,6 +46,7 @@ for i in range(0, len(list_fm_time)):
 
 list_f1_duration2 = [x*x for x in list_f1_duration]
 list_f2_duration2 = [x*x for x in list_f2_duration]
+list_fm_duration2 = [x*x for x in list_fm_duration]
 
 print list_fm_duration
 ex = np.mean(list_f1_duration)
@@ -54,6 +55,7 @@ ey = np.mean(list_f2_duration)
 ex2 = np.mean(list_f1_duration2)
 ey2 = np.mean(list_f2_duration2)
 ee = np.mean(list_fm_duration)
+ee2 = np.mean(list_fm_duration2)
 print 'E[X] = {}'.format(ex)
 print 'E[Y] = {}'.format(ey)
 print 'E[X^2] = {}'.format(ex2)
@@ -62,14 +64,15 @@ print 'Var(X) = {}'.format(ex2 - ex**2)
 print 'Var(Y) = {}'.format(ey2 - ey**2)
 ex3 = ex2 - ex*ex
 ey3 = ey2 - ey*ey
+ee3 = ee2 - ee*ee
 
 
 pai = [0 for x in range(len(list_fm_time))]
 pbi = [0 for x in range(len(list_fm_time))]
 for i in range(0,len(list_fm_duration)):
     x = list_fm_duration[i]
-    pai[i] = math.log(1/((2*PI*ex3))) - ((x - ex)**2)/(2*ex3)
-    pbi[i] = math.log(1/((2*PI*ey3))) - ((x - ey)**2)/(2*ey3)
+    pai[i] = math.log(1/((2*PI*ex3)**0.5)) - ((x - ex)**2)/(2*ex3)
+    pbi[i] = math.log(1/((2*PI*ey3)**0.5)) - ((x - ey)**2)/(2*ey3)
 
 pa = np.sum(pai)
 print pa
@@ -83,6 +86,9 @@ print p
 p2 = np.exp(p)
 print p2
 print ee
+print ee3
+print ey3
+print ee2
 
 
 
