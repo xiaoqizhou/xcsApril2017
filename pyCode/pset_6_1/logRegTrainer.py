@@ -1,6 +1,8 @@
+# Logistic Regression Trainer
 import numpy
 class logRegTrainer(object):
     def __init__(self):
+        # Define step length and iteration numbers
         self.eta = 0.0025
         self.iteration = 10000
     def sigmoid(self, x):
@@ -15,8 +17,10 @@ class logRegTrainer(object):
                 print("Iteration #%d"%(i))
 
             for k in range (0, inputData.rowNum):
+                # Calculate devLL
                 x_now =numpy.append(numpy.array([1]), inputData.rowInputList[k])
                 self.devLL += (inputData.rowOutputList[k] - self.sigmoid(numpy.sum(x_now*self.theta)))*x_now
+            # Move one step
             self.theta += self.eta*self.devLL
 
 
@@ -28,6 +32,7 @@ class logRegTrainer(object):
         self.correctRate = float(0)
         for i in range(0, len(testData.rowInputList)):
             x_now = numpy.append(numpy.array([1]), testData.rowInputList[i])
+            # Calculate P(Y = 1|X) based on current row of data
             self.py[i] = self.sigmoid(numpy.sum(x_now* self.theta))
 
             if self.py[i] > 0.5:

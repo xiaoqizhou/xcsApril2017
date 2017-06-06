@@ -1,7 +1,9 @@
+#MLE Trainer
 import numpy
 class MLETrainer(object):
 
     def loadTrainDataSet(self, inputData):
+        # Parameter initialization
         self.cxy = numpy.zeros((inputData.inputNum,2,2))
         self.cy = numpy.zeros(2)
         self.pxy = numpy.zeros((inputData.inputNum,2,2))
@@ -10,16 +12,20 @@ class MLETrainer(object):
         self.cx = numpy.zeros((inputData.inputNum, 2))
         self.px = numpy.zeros((inputData.inputNum, 2))
         self.r = numpy.zeros(inputData.inputNum)
-
+        # Count all the X_i
         for i in range(0,len(inputData.rowInputList)):
             for j in range(0, len(inputData.rowInputList[i])):
                 self.cx[j][int(inputData.rowInputList[i][j])]+= 1
                 for k in range(0,len(inputData.rowOutputList[i])):
                     self.cxy[j][int(inputData.rowInputList[i][j])][int(inputData.rowOutputList[i][k])] += 1
+        # Calculate probabilities
         self.pxy = self.cxy / inputData.rowNum
+
         self.px = self.cx / inputData.rowNum
+        # Count all the Y
         for i in range(0,len(inputData.rowOutputList)):
             self.cy[int(inputData.rowOutputList[i][0])] += 1
+        # Calculate probabilities
         self.py = self.cy/ inputData.rowNum
         py2 = numpy.zeros((inputData.inputNum,2,2))
         for i in range(0, (self.pxy.shape)[0]):
@@ -31,6 +37,7 @@ class MLETrainer(object):
             self.r[i] = (self.px_y[i][1][1]/self.px[i][1])/(self.px_y[i][0][1]/self.px[i][0])
 
     def loadTestDataSet(self, testData):
+        # Parameter initialization
         self.ty = numpy.zeros(testData.rowNum)
         self.correct = 0
         self.correctRate = float(0)
@@ -39,6 +46,7 @@ class MLETrainer(object):
         for i in range(0, len(testData.rowInputList)):
 
             for j in range(0, len(testData.rowInputList[i])):
+                # Load the current probability of Y = 0 given certain X
                 px_yNow_0 = self.px_y[j][int(testData.rowInputList[i][j])][0]
 
                 if px_yNow_0 > 0:
