@@ -23,7 +23,7 @@
 
 \pagestyle{fancy}
 
-\lhead{CS 109, Stanford University \\ Problem Set \#5} 
+\lhead{CS 109, Stanford University \\ Problem Set \#6} 
 \rhead{Xiaoqi Zhou (xqzhou@stanford.edu) \\ 06237147}
 \usepackage{color}
 \usepackage{courier}
@@ -93,8 +93,9 @@
 			\hat{y}(1-\hat{y})
 			h
 		}$\\ 
-		\item 
-		We can define a small step $\eta$ and iterate the procedure enough times. Essentially, the estimation of each particular parameter $\theta_i$ will provide the highest log-likelihood. These are the final values of $\theta_i$.\\
+		\item
+		The results show the chain rule of derivative. We can use computer to calculate the derviative of all the parameters based on a given neural network.\\
+		We can define a small step $\eta$, update the derivative and iterate the procedure enough times. Essentially, the estimation of each particular parameter $\theta_i$ will provide the highest log-likelihood. These are the final values of $\theta_i$.\\
 		By using the parameter $\theta_i$ from the training data set we can predict the output $Y$ from any given $X$.
 	\end{enumerate}
 	\item
@@ -254,9 +255,8 @@
 	
 \end{enumerate}
 
-
-\newpage
-
+\textbf{The code is attached from next page. Both problem 5 and problem 6 are using the same entrance main.py\\File list:\\}
+\textbf{main.py\\dataLoader.py\\MLETrainer.py\\laplaceTrainer.py\\logRegTrainer.py\\}
 
 
 \end{document}

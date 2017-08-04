@@ -1,3 +1,4 @@
+# laplaceTrainer.py
 # Laplace Trainer
 
 import numpy

@@ -1,3 +1,4 @@
+# logRegTrainer.py
 # Logistic Regression Trainer
 import numpy
 class logRegTrainer(object):
@@ -9,6 +10,7 @@ class logRegTrainer(object):
         return 1/(1 + numpy.exp(-x))
 
     def loadTrainDataSet(self, inputData):
+        # Train the model
         self.theta = numpy.zeros((inputData.inputNum+1))
         self.devLL = numpy.zeros((inputData.inputNum+1))
         for i in range (0, self.iteration):
@@ -26,6 +28,7 @@ class logRegTrainer(object):
 
 
     def loadTestDataSet(self, testData):
+        # Verify model with test data set
         self.py = numpy.zeros(testData.rowNum)
         self.ty = numpy.zeros(testData.rowNum)
         self.correct = 0
@@ -44,16 +47,16 @@ class logRegTrainer(object):
 
         self.correctRate = self.correct / float(testData.rowNum)
 
-
+    # Print estimation accuracy
     def printAccuracy(self):
         print("Logistic: Accuracy = %f"%(self.correctRate))
-
+    # Print parameter list
     def printTheta(self):
         index = 0
         for i in (self.theta):
             print("Logistic Regression: theta[%d] = %f"%(index, i))
             index += 1
-
+    # Print LL
     def printLL(self, inputData):
         self.LL = 0
         self.LL0 = 0

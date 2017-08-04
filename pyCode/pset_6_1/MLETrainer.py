@@ -1,4 +1,5 @@
-#MLE Trainer
+# MLETrainer.py
+# MLE Trainer
 import numpy
 class MLETrainer(object):
 
